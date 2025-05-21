@@ -1,0 +1,113 @@
+---
+import { Image } from 'astro:assets'
+import {profile} from '../../settings'
+import SocialIcons from './SocialIcons.astro'
+import ProfilePictures from '@/assets/profile_pictures.jpg'
+import { getCollection } from 'astro:content'
+import { template } from '@/settings'
+
+const isBlogPopulated = await getCollection('blog').then(collection => collection.length > 0)
+
+const {fullName, title} = profile
+---
+<aside
+	class='px-4 pt-4 h-100 w-[20rem] bg-base-200 text-base-content flex flex-col'
+>
+	<div class='flex flex-col my-8 justify-between h-full'>
+		<div>
+			<div class='flex justify-center items-center flex-col'>
+				<Image
+					class='mask mask-circle size-44'
+					src={ProfilePictures}
+					alt={`Profile picture of ${fullName}`}
+				/>
+				<h1 class="text-lg font-black mt-8 hidden lg:block">{title} <span>{fullName}</span></h1>
+			</div>
+			<div class='mx-4 mt-4'>
+				<ul class='space-y-4 menu grow shrink menu-md overflow-y-auto text-sm'>
+					<li>
+                        <a class="text-sm" href=`${template.base}/` class='text-lg'>Home</a>
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/papers` class='text-lg'>Position Description</a>
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/cv` class='text-lg'>Curriculum Vitae</a>
+                    </li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/cv` class='text-lg'>Position Description</a>
+                    </li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/cv` class='text-lg'>Annotated Goals</a>
+                    </li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/cv` class='text-lg'>Self-Evaluations</a>
+                    </li>
+					<li class="font-extrabold">
+                        Criterion I
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>Library Website Development</a>
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>Library Website UX Research</a>
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>TIC Website Development</a>
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>Digital Signage Development</a>
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>Digital Signage UX Research</a>
+					</li>
+                    <li class="font-extrabold">
+                        Criterion II
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>Certifications</a>
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>Continuous Education</a>
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>Conferences Attended</a>
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>Exhibits</a>
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>Presentations</a>
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>Posters</a>
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>Publications</a>
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>Workshops</a>
+					</li>
+					<li class="font-extrabold">
+                        Criterion III
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>MSU Libraries</a>
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>MSU</a>
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>National</a>
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>International</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class='mx-4'>
+			<SocialIcons/>
+		</div>
+	</div>
+</aside>

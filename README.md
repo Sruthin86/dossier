@@ -56,8 +56,24 @@ docker stack deploy -c docker-compose.proxy.yml router
 
 ### Build Application
 
-- This application uses Docker con
+- This application uses Docker Swarm, a container orchestration tool
+to build and deploy the Astro app.
+- Use the following command to build the app.
+
+``` bash
+docker build --target setup ./ -t dossier:latest
+```
 
 ### Deploy Application
+
+- Deploy the dossier app using docker swarm
+
+``` bash
+# Dev instance
+APP_HOST=gaddamsrdossier.devel.lib.msu.edu docker stack deploy -c docker-compose.yml -c docker-compose.dev.yml gaddamsr
+
+#Prod instance
+APP_HOST=gaddamsrdossier.lib.msu.edu docker stack deploy -c docker-compose.yml -c docker-compose.dev.yml gaddamsr
+```
 
 [devUrl]: https://gaddamsrdossier.devel.lib.msu.edu

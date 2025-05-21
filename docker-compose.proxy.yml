@@ -21,8 +21,8 @@ services:
       # Entrypoints
       # Enable web entry point and redirect to websecure
       - "--entrypoints.web.address=:80"
-      - "--entrypoints.web.http.redirections.entryPoint.to=web"
-      - "--entrypoints.web.http.redirections.entryPoint.scheme=http"
+      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
       # Enable websecure entry point
       - "--entrypoints.websecure.address=:443"
       # Load certs from the host
@@ -54,7 +54,7 @@ services:
       # the changes in the docker socket
       - /var/run/docker.sock:/var/run/docker.sock:ro
       # Mount the traefic dir which has the certs and the conf file
-      # - /etc/traefik/:/etc/traefik/
+      - /etc/traefik/:/etc/traefik/
       # Add a volume for traefik logs
       # TODO
     deploy:
