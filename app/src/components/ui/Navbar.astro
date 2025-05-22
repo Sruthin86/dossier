@@ -2,11 +2,9 @@
 import { Image } from 'astro:assets'
 import {profile} from '../../settings'
 import SocialIcons from './SocialIcons.astro'
-import ProfilePictures from '@/assets/profile_pictures.jpg'
+import ProfilePictures from '@/assets/profile_pictures.png'
 import { getCollection } from 'astro:content'
 import { template } from '@/settings'
-
-const isBlogPopulated = await getCollection('blog').then(collection => collection.length > 0)
 
 const {fullName, title} = profile
 ---
@@ -21,7 +19,7 @@ const {fullName, title} = profile
 					src={ProfilePictures}
 					alt={`Profile picture of ${fullName}`}
 				/>
-				<h1 class="text-lg font-black mt-8 hidden lg:block">{title} <span>{fullName}</span></h1>
+				<h1 class="text-lg font-black mt-8 hidden lg:block"> <span>{fullName}</span> <br>{title}</h1>
 			</div>
 			<div class='mx-4 mt-4'>
 				<ul class='space-y-4 menu grow shrink menu-md overflow-y-auto text-sm'>
@@ -43,11 +41,14 @@ const {fullName, title} = profile
 					<li>
                         <a class="text-sm" href=`${template.base}/cv` class='text-lg'>Self-Evaluations</a>
                     </li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/cv` class='text-lg'>References</a>
+                    </li>
 					<li class="font-extrabold">
                         Criterion I
 					</li>
 					<li>
-                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>Library Website Development</a>
+                        <a class="text-sm" href=`${template.base}/mainweb` class='text-lg'>Library Website Development</a>
 					</li>
 					<li>
                         <a class="text-sm" href=`${template.base}/research` class='text-lg'>Library Website UX Research</a>
@@ -60,6 +61,9 @@ const {fullName, title} = profile
 					</li>
 					<li>
                         <a class="text-sm" href=`${template.base}/research` class='text-lg'>Digital Signage UX Research</a>
+					</li>
+					<li>
+                        <a class="text-sm" href=`${template.base}/research` class='text-lg'>Web Apps A11y Remediation</a>
 					</li>
                     <li class="font-extrabold">
                         Criterion II
