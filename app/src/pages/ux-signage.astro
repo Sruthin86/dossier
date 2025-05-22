@@ -1,0 +1,50 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BetterIcon from "@/components/ui/BetterIcon.astro";
+import List from "@/components/ui/List.astro";
+import {RESEARCH_ICONS} from "@/data/researchIcons";
+import Figure from "@/components/ui/Figure.astro";
+import ProfilePictures from '@/assets/profile_pictures.png'
+import ButtonLink from "@/components/ui/ButtonLink.astro";
+---
+
+<Layout title="Sruthin Gaddam | Digital Signage UX Research">
+  <div class="prose max-w-none">
+    <h1 class="text-3xl font-bold mb-8">Digital Signage UX Research</h1>
+
+    <div class="mb-12">
+    <p> 
+        In the brief window between the design, development, and launch of the new Digital Signage application, our team needed a fast, effective way to gather user feedback—without the luxury of a formal testing phase.
+    </p>
+    <p>
+        To meet this challenge, we implemented a creative, low-tech feedback strategy. I deployed a development version of the application on a kiosk located on the 4th floor of the Main Library, where it would be visible to a steady stream of patrons. Next to the kiosk, I placed a whiteboard and a stack of sticky notes, inviting users to share their thoughts, impressions, and suggestions directly (Figure 1).
+    </p>
+    <div class="grid grid-cols-1 mt-3 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
+           
+        <Figure
+            path="/src/assets/images/uxSignage.png"
+            alt="A metal kiosk with a whiteboard and sticky notes on the whiteboard"
+            caption="Figure 3: Collecting user feedback on the new digital signage system using a whiteboard and sticky notes"
+            width="100%"
+            height="100%"
+        />
+             
+    </div>
+    <p>
+        This simple setup allowed us to:
+        <ul>
+            <li>Collect real-time, in-context feedback from actual users.</li>
+            <li>Observe how patrons interacted with the signage in a natural environment.</li>
+            <li>Identify usability issues and opportunities for improvement before the full launch.</li>
+        </ul>
+    </p>
+    <p> 
+        Despite the short timeline, this approach proved highly effective. It demonstrated how creative thinking and user-centered design can thrive even under tight constraints. The feedback we received directly informed refinements to the application’s interface such as improving the fonts, adding more weather information, etc.
+    </p>
+    <p> 
+        The feedback board was moved to the 1st floor after where we received lots of comments, both positive and suggestions for improvements. Our Dean, Dr Romanosky wrote <i>“I wanted to send a big thank you to you and your team for the work on the new digital signage. I think it looks great. I also really appreciate the feedback collections you’ve been doing around it (My favorite sticky note: “Pretty lit.”)”<i>.
+    </p>
+
+    </div>
+  </div>
+</Layout>
