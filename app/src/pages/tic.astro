@@ -1,0 +1,84 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BetterIcon from "@/components/ui/BetterIcon.astro";
+import List from "@/components/ui/List.astro";
+import {RESEARCH_ICONS} from "@/data/researchIcons";
+import Figure from "@/components/ui/Figure.astro";
+import ProfilePictures from '@/assets/profile_pictures.png'
+import ButtonLink from "@/components/ui/ButtonLink.astro";
+---
+
+<Layout title="Sruthin Gaddam | TIC Website Development">
+  <div class="prose max-w-none">
+    <h1 class="text-3xl font-bold mb-8">TIC Website Development</h1>
+
+    <div class="mb-12">
+        <p>
+            As Drupal 7 approached its official end-of-life on January 5, 2025, our team faced a non-negotiable deadline to rebuild the Turfgrass Information Center (TIC) website from the ground up using Drupal 10. It was tight deadline, not just to migrate content, but to modernize the entire infrastructure and user experience. Under the leadership of Joshua Sanchez, I took the lead on building a robust, secure, and scalable application stack that would serve as the foundation for the new site.
+        </p>
+        <p> 
+            One of the first major decisions I made was to implement Traefik, a cutting-edge reverse proxy server. This not only streamlined URL routing but also significantly improved our defenses against the bot attacks that had plagued both the TIC and Main Library websites. The new stack allowed us to share a single codebase across development, testing, and production environments—improving our deployment workflow and reducing maintenance overhead.
+        </p>
+        <p> 
+            With the infrastructure in place, our focus shifted to the heart of the TIC site: its search functionality. The site connects users to the STAR backend database, a rich resource for turfgrass research. Working closely with our lead designer, Shelby Kroske, I developed four distinct search interfaces—Basic, Power, Guided, and Thesaurus—each tailored to different user needs. The Power and Guided searches received particularly significant upgrades, including dynamic term grouping and real-time addition/removal of search parameters. These enhancements gave users far more control and flexibility than the previous system allowed. Below are the screenshots of the old TIC search interface (Figure 1) and the new search interface (Figure 2).
+        </p>
+         <div class="grid grid-cols-2 mt-3 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
+           
+            <Figure
+                path="/src/assets/images/oldTicSearch.png"
+                alt="Screenshot of a search webfrom the old TIC website"
+                caption="Figure 1: Power search on the old search interface"
+                width="100%"
+                height="100%"
+            />
+             <Figure
+                path="/src/assets/images/newTicSearch.png"
+                alt="Screenshot of a search webfrom the new TIC website"
+                caption="Figure 2: Power search on the new search interface"
+                width="100%"
+                height="100%"
+            />
+        </div>
+        <p> 
+            Another major improvement was the result selection feature. I redesigned it to dynamically update the count of selected results and ensure accurate data retrieval when users switched between search types. These refinements made the search experience more intuitive and responsive.
+        </p>
+        <p> 
+            Throughout the project, I worked closely with Shelby to ensure the final product aligned with her design vision. We prioritized responsive design, ensuring the site was fully functional and visually consistent across desktop, tablet, and mobile devices (Figure 3). Presenting complex information on smaller screens was a particular challenge (Figure 4), but through close collaboration with Andrew Lundeen and Elizabeth Mabie from the TIC team, we were able to fine-tune the layout and content presentation to meet their expectations.
+        </p>
+        <div class="grid grid-cols-2 mt-3 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
+           
+            <Figure
+                path="/src/assets/images/mobileTicHome.png"
+                alt="TIC website homepage on a mobile device showing various buttons and text blurb"
+                caption="Figure 3: Mobile version of the TIC website"
+                width="100%"
+                height="100%"
+            />
+             <Figure
+                path="/src/assets/images/mobileTicSearch.png"
+                alt="TIC website search results on a mobile device showing search records"
+                caption="Figure 4: Mobile version of the TIC search results"
+                width="100%"
+                height="100%"
+            />
+        </div>
+        <p> 
+            The new TIC website launched on January 6, 2025, just one day after the Drupal 7 sunset. For the first time, we integrated analytics into the site, giving us valuable insights into user behavior. In the first few months post-launch, the site recorded:
+            <ul>
+                <li>5,529 visits</li>
+                <li>44,759 page views</li>
+                <li>20,672 unique page views</li>
+            </ul>
+        <p> 
+            We even received unsolicited praise from the United States Golf Association (USGA), who shared: <i>“Hadn’t been to TGIF in a while, new website looks great, and behaves well! Nice work.”</i>.
+        </p>
+        <ButtonLink
+            path="https://tic.lib.msu.edu/"
+            target=""
+            >
+            Visit the new TIC website
+        </ButtonLink>
+    </div>
+    
+ </div>
+</Layout>
