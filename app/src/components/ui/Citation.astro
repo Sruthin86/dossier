@@ -1,5 +1,5 @@
 ---
-const {authors, title, type, info, link} = Astro.props
+const {authors, title, type, info, link, extlink} = Astro.props
 ---
 <p class="bg-gray-800 text-gray-200 p-4 rounded-[.25rem] mb-4 ps-16 -indent-8">
     <span class="text-gray-200">{authors}</span>
@@ -7,8 +7,13 @@ const {authors, title, type, info, link} = Astro.props
     <span class="text-gray-200">[{type}].</span>
     <span class="text-gray-200">{info}</span>
     {link && (
-        <a href={link} target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">
+        <a href={link} target="_blank" rel="noopener noreferrer" class="text-gray-50 hover:underline">
             https://gaddamsrdossier.lib.msu.edu/{link} 
+        </a>
+    )}
+    {extlink && (
+        <a href={extlink} target="_blank" rel="noopener noreferrer" class="text-gray-50 hover:underline">
+            {extlink}
         </a>
     )}
 </p>

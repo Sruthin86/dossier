@@ -7,32 +7,30 @@ import Figure from "@/components/ui/Figure.astro";
 import ProfilePictures from '@/assets/profile_pictures.png'
 import Citation from "@/components/ui/Citation.astro";
 ---
-
 <Layout title="Sruthin Gaddam | Posters">
-  <div class="prose max-w-none">
-    <h1 class="text-3xl font-bold mb-8">Posters</h1>
-
-    <div class="mb-12">
-        <h2>Insights from our Web Analytics</h2>
-        <p> 
-           Austin Deneau, Shelby Kroske, and I presented a poster at the MSU Libraries Knowledge and Creativity Exchange, offering a preview of the quantitative data behind the usage of the main library website. The poster (Figure 1) showcased key statistics such as the most frequently visited pages, top search terms,  browser usage, mobile usage, and other key usage metrics. During our poster presentation, we discussed how this data is being used to guide our decision-making process—helping us refine features, prioritize improvements, and better understand user behavior.
-        </p>
-        <h3>Citation</h3>
-        <Citation
-            authors="Deneau, A., Gaddam, S., & Kroske, S. (2024, Dec. 8)."
-            title="Insights from our web analytics "
-            type="Poster Presentation"
-            info="MSU Libraries Knowledge and Creativity Exchange, East Lansing, MI."
-        />
-        <div class="grid grid-cols-1 mt-3 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
-            <Figure
-                path="/src/assets/images/poster.png"
-                alt="Poster shocasing charts and graphs"
-                caption="Figure 1: Insights from Our Web Analytics Poster presented at the MSU Libraries Knowledge and Creativity Exchange."
-                width="100%"
-                height="100%"
-            />
+    <div class="prose max-w-none">
+        <h1 class="text-3xl font-bold mb-8">Posters</h1>
+        <div class="mb-12">
+            <h2>Insights from our Web Analytics</h2>
+            <p> 
+                Austin Deneau, Shelby Kroske, and I presented a poster at the MSU Libraries Knowledge and Creativity Exchange, offering a preview of the quantitative data behind the usage of the main library website. The poster (Figure 1) showcased key statistics such as the most frequently visited pages, top search terms,  browser usage, mobile usage, and other key usage metrics. During our poster presentation, we discussed how this data is being used to guide our decision-making process—helping us refine features, prioritize improvements, and better understand user behavior.
+            </p>
+            <h3>Citation</h3>
+            <Citation
+                authors="Deneau, A., Gaddam, S., & Kroske, S. (2024, Dec. 8)."
+                title="Insights from our web analytics "
+                type="Poster Presentation"
+                info="MSU Libraries Knowledge and Creativity Exchange, East Lansing, MI."
+                />
+            <div class="grid grid-cols-1 mt-3 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
+                <Figure
+                    path="/src/assets/images/poster.png"
+                    alt="Poster shocasing charts and graphs"
+                    caption="Figure 1: Insights from Our Web Analytics Poster presented at the MSU Libraries Knowledge and Creativity Exchange."
+                    width="100%"
+                    height="100%"
+                    />
+            </div>
         </div>
     </div>
-  </div>
 </Layout>

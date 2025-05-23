@@ -7,160 +7,157 @@ import Figure from "@/components/ui/Figure.astro";
 import ProfilePictures from '@/assets/profile_pictures.png'
 import ButtonLink from "@/components/ui/ButtonLink.astro";
 ---
-
 <Layout title="Sruthin Gaddam | Library Website Development">
-  <div class="prose max-w-none">
-    <h1 class="text-3xl font-bold mb-8">Library Website Development</h1>
-
-    <div class="mb-12">
-     <p>
-     The WebUX team embarked on a journey to redesign and develop the Main Library website, an ambitious and a long-term project for our team. This endeavor offered a rare opportunity to collaborate closely with our designers to build the major components of our website. With the guidance from our team, I took the lead on developing key components—the Main Library Search, the Main Library Hours pages, the Main Library Homepage, Branch Library Homepages, Branch Library Search pages and the Main Library Spaces pages.
-     </p>
-     <h2>Library Search</h2>
-     <p>
-     The development of the Main Library Search began with building a flexible and robust backend system for search configurations. From the outset, the decision was made to make the search module configurable for non-developers, empowering Drupal admins with control over various aspects: adjusting the number of results per box, modifying the results box title, toggling display settings, and even customizing the order of results boxes (Figure 1).
-     </p>
-     <p>
-     New functionality was introduced, allowing users to view results from a single source without being overwhelmed by the traditional bento box format. To meet the specific needs of librarians, EDS and FOLIO APIs were integrated, enabling users to retrieve call numbers and book availability in a more accessible way.
-     </p>
-     <p>
-     I encountered a problem with the Springshare API’s inability to search databases—one that was overcome by developing a Drupal module capable of fetching database information from Springshare and indexing it into the backend search engine, SOLR. This functionality was further extended to Course Reserves, allowing course-related materials to be indexed in the search engine and enabling enhanced features such as keyword highlighting, searching by course number, instructor name, or course title. Boolean searches were also implemented, significantly improving the search capabilities. By December 2022, the search had been finalized (Figure 2) and transitioned to the Web Advisory Group for testing in early 2023. All the aforementioned improvements made our search more usable and robust compared to what we had on the old Library website (Figure3).  
-     </p>
-     <p>
-      The same search module was also used to develop the Branch Library Search pages, which uses the same backend that can be configured to add and remove search boxes on the Branch Library Search pages. 
-     </p>
-     <h2
+    <div class="prose max-w-none">
+        <h1 class="text-3xl font-bold mb-8">Library Website Development</h1>
+        <div class="mb-12">
+            <p>
+                The WebUX team embarked on a journey to redesign and develop the Main Library website, an ambitious and a long-term project for our team. This endeavor offered a rare opportunity to collaborate closely with our designers to build the major components of our website. With the guidance from our team, I took the lead on developing key components—the Main Library Search, the Main Library Hours pages, the Main Library Homepage, Branch Library Homepages, Branch Library Search pages and the Main Library Spaces pages.
+            </p>
+            <h2>Library Search</h2>
+            <p>
+                The development of the Main Library Search began with building a flexible and robust backend system for search configurations. From the outset, the decision was made to make the search module configurable for non-developers, empowering Drupal admins with control over various aspects: adjusting the number of results per box, modifying the results box title, toggling display settings, and even customizing the order of results boxes (Figure 1).
+            </p>
+            <p>
+                New functionality was introduced, allowing users to view results from a single source without being overwhelmed by the traditional bento box format. To meet the specific needs of librarians, EDS and FOLIO APIs were integrated, enabling users to retrieve call numbers and book availability in a more accessible way.
+            </p>
+            <p>
+                I encountered a problem with the Springshare API’s inability to search databases—one that was overcome by developing a Drupal module capable of fetching database information from Springshare and indexing it into the backend search engine, SOLR. This functionality was further extended to Course Reserves, allowing course-related materials to be indexed in the search engine and enabling enhanced features such as keyword highlighting, searching by course number, instructor name, or course title. Boolean searches were also implemented, significantly improving the search capabilities. By December 2022, the search had been finalized (Figure 2) and transitioned to the Web Advisory Group for testing in early 2023. All the aforementioned improvements made our search more usable and robust compared to what we had on the old Library website (Figure3).  
+            </p>
+            <p>
+                The same search module was also used to develop the Branch Library Search pages, which uses the same backend that can be configured to add and remove search boxes on the Branch Library Search pages. 
+            </p>
+            <h2
+        </div>
+        <div class="grid grid-cols-3 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
+            <Figure
+                path="/src/assets/images/searchBackend.png"
+                alt="A from displaying different input fields"
+                caption="Figure 1: Configurable search interface built into Drupal"
+                width="100%"
+                height="100%"
+                />
+            <Figure
+                path="/src/assets/images/newSearch.png"
+                alt="A screenshot of the a webpage showing search results from various sources"
+                caption="Figure 2:  New search with advanced options and tabs to see results from individual sources"
+                width="100%"
+                height="100%"
+                />
+            <Figure
+                path="/src/assets/images/oldSearch.png"
+                alt="A screenshot of the a webpage showing search results from various sources in a grid layout"
+                caption="Figure 3:  Old search showing results from various sources"
+                width="100%"
+                height="100%"
+                />
+        </div>
+        <h2>Main Library and Branch Libraries Homepages</h2>
+        <p>
+            After the search was built, my focus shifted to an equally critical aspect—the development of the Main Library Homepage. This phase included designing and implementing essential sections such as Quick Links, Events & Workshops, News, Exhibits, and the Services section. Integrating external data sources required innovation, particularly when pulling event information from Springshare. To accomplish this, a new Drupal module was crafted, not only fetching events but also filtering them by category for a more refined user experience. The News, Exhibits and Services components were built directly within Drupal. After the redesign, our total homepage views are up from 241,154 to 312,912. This is comparing views on the old site (Figure 4) from Spring 2023 to views on the new site (Figure 5) in Fall 2023. 
+        </p>
+        <div class="grid grid-cols-2 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
+            <Figure
+                path="/src/assets/images/oldHomepage.png"
+                alt="Main Library Homepage with search, events, and services sections"
+                caption="Figure 4: MSU Library website homepage on the old site"
+                width="100%"
+                height="100%"
+                />
+            <Figure
+                path="/src/assets/images/newHomepage.png"
+                alt="Main Library Homepage with hours, events, and quick links sections"
+                caption="Figure 5: MSU Library website homepage on the new site"
+                width="100%"
+                height="100%"
+                />
+        </div>
+        <p>
+            By January 2023, the Main Library Homepage was completed, and I moved on to the next set of milestones. February 2023 brought the development of specialized homepages for the Murray & Hong Special Collections, the Creative Solutions Center, and the Makerspace, Business Library, Art Library, Music Library, Map Library and other branch libraries—each designed to meet distinct needs while maintaining the cohesive vision of the redesigned library website. Below are the screenshots of the old Special Collections homepage (Figure 6) and the new Special Collections homepage (Figure 7).
+        </p>
+        <div class="grid grid-cols-2 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
+            <Figure
+                path="/src/assets/images/oldSpcHomepage.png"
+                alt="Special Collections Library Homepage with search, and a text blurb about the library"
+                caption="Figure 6: Special Collections homepage on the old website"
+                width="100%"
+                height="100%"
+                />
+            <Figure
+                path="/src/assets/images/newSpcHomepage.png"
+                alt="Special Collections Library Homepage with search, showcasing the collections on the homepage"
+                caption="Figure 7: Special Collections homepage on the new website"
+                width="100%"
+                height="100%"
+                />
+        </div>
+        <h2>Hours Pages</h2>
+        <p>
+            To modernize how library and branch hours were managed and displayed, our team transitioned to a new backend system. We selected Springshare as the platform for inputting hours and leveraged its API to dynamically retrieve and display hours for the main library and all branch locations.
+            I developed a new hours page based on designs by our UX Designer, Shelby Kroske. The interface presents a clear week view of all library hours (Figure 8) and allows users to seamlessly switch to a month view for any selected library (Figure 9). Shelby and I collaborated closely to ensure the mobile experience was equally effective, carefully designing and implementing responsive layouts for both the week (Figure 10) and month (Figure 11) views to ensure clarity and usability on smaller screens.
+        </p>
+        <div class="grid grid-cols-2 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
+            <Figure
+                path="/src/assets/images/weekView.png"
+                alt="Screenshot of a webpage showing library hours in a week view"
+                caption="Figure 8: Week view of library hours on the new website"
+                width="100%"
+                height="100%"
+                />
+            <Figure
+                path="/src/assets/images/monthView.png"
+                alt="Screenshot of a webpage showing library hours in a month view"
+                caption="Figure 9: Month view of library hours on the new website"
+                width="100%"
+                height="100%"
+                />
+            <Figure
+                path="/src/assets/images/mobileWeekView.png"
+                alt="Screenshot of a webpage showing library hours in a week view on a mobile device"
+                caption="Figure 10: Week view of library hours on the new website on a mobile device"
+                width="100%"
+                height="100%"
+                />
+            <Figure
+                path="/src/assets/images/mobileMonthView.png"
+                alt="Screenshot of a webpage showing library hours in a month view on a mobile device"
+                caption="Figure 11: Month view of library hours on the new website on a mobile device"
+                width="100%"
+                height="100%"
+                />
+        </div>
+        <h2>Library Spaces Discovery Interface Redesign and Development</h2>
+        <p>
+            Inspired by the work of NCSU Libraries, we set out to redesign and enhance the interface used by patrons to explore and discover library spaces. The previous system (Figure 12) featured a Netflix-style horizontal scrolling layout, which presented significant accessibility challenges and limited user interaction.
+        </p>
+        <p>
+            Collaborating with UX Designer Shelby Kroske, we envisioned a new interface that would be fast, responsive, and intuitive. This effort required extensive research into both user-centered design principles and technical implementation strategies. Shelby designed a dynamic, list-style interface that adapts in real time to user preferences, offering a more accessible and streamlined experience.
+        </p>
+        <p>
+            On the development side, I built a custom Drupal module capable of querying our search index to retrieve available space data. The module dynamically updates the displayed records based on user-selected filters, ensuring a seamless and personalized discovery process (Figure 13). I took extra care to ensure that this new interface is accessible by having it tested by our students in the Accessibility unit and addressing their concerns from the early stages of development.
+        </p>
+        <div class="grid grid-cols-2 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
+            <Figure
+                path="/src/assets/images/oldSpaces.png"
+                alt="Screenshot of a webpage showing library spaces in a grid layout"
+                caption="Figure 12: Discover library spaces on the old website"
+                width="100%"
+                height="100%"
+                />
+            <Figure
+                path="/src/assets/images/newSpaces.png"
+                alt="Screenshot of a webpage showing library spaces in a list layout"
+                caption="Figure 13: Discover library spaces interface on the new website"
+                width="100%"
+                height="100%"
+                />
+        </div>
+        <p>The new version of our main library website was launched on Aug 17th, 2023.</p>
+        <ButtonLink
+            path="https://www.lib.msu.edu/"
+            target=""
+            >
+            Visit the new MSU Library website
+        </ButtonLink>
     </div>
-    <div class="grid grid-cols-3 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
-      <Figure
-        path="/src/assets/images/searchBackend.png"
-        alt="A from displaying different input fields"
-        caption="Figure 1: Configurable search interface built into Drupal"
-        width="100%"
-        height="100%"
-      />
-      <Figure
-        path="/src/assets/images/newSearch.png"
-        alt="A screenshot of the a webpage showing search results from various sources"
-        caption="Figure 2:  New search with advanced options and tabs to see results from individual sources"
-        width="100%"
-        height="100%"
-      />
-      <Figure
-        path="/src/assets/images/oldSearch.png"
-        alt="A screenshot of the a webpage showing search results from various sources in a grid layout"
-        caption="Figure 3:  Old search showing results from various sources"
-        width="100%"
-        height="100%"
-      />
-    </div>
-
-    <h2>Main Library and Branch Libraries Homepages</h2>
-    <p>
-      After the search was built, my focus shifted to an equally critical aspect—the development of the Main Library Homepage. This phase included designing and implementing essential sections such as Quick Links, Events & Workshops, News, Exhibits, and the Services section. Integrating external data sources required innovation, particularly when pulling event information from Springshare. To accomplish this, a new Drupal module was crafted, not only fetching events but also filtering them by category for a more refined user experience. The News, Exhibits and Services components were built directly within Drupal. After the redesign, our total homepage views are up from 241,154 to 312,912. This is comparing views on the old site (Figure 4) from Spring 2023 to views on the new site (Figure 5) in Fall 2023. 
-    </p>
-     <div class="grid grid-cols-2 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
-      <Figure
-        path="/src/assets/images/oldHomepage.png"
-        alt="Main Library Homepage with search, events, and services sections"
-        caption="Figure 4: MSU Library website homepage on the old site"
-        width="100%"
-        height="100%"
-      />
-      <Figure
-        path="/src/assets/images/newHomepage.png"
-        alt="Main Library Homepage with hours, events, and quick links sections"
-        caption="Figure 5: MSU Library website homepage on the new site"
-        width="100%"
-        height="100%"
-      />
-    </div>
-    <p>
-        By January 2023, the Main Library Homepage was completed, and I moved on to the next set of milestones. February 2023 brought the development of specialized homepages for the Murray & Hong Special Collections, the Creative Solutions Center, and the Makerspace, Business Library, Art Library, Music Library, Map Library and other branch libraries—each designed to meet distinct needs while maintaining the cohesive vision of the redesigned library website. Below are the screenshots of the old Special Collections homepage (Figure 6) and the new Special Collections homepage (Figure 7).
-    </p>
-     <div class="grid grid-cols-2 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
-      <Figure
-        path="/src/assets/images/oldSpcHomepage.png"
-        alt="Special Collections Library Homepage with search, and a text blurb about the library"
-        caption="Figure 6: Special Collections homepage on the old website"
-        width="100%"
-        height="100%"
-      />
-      <Figure
-        path="/src/assets/images/newSpcHomepage.png"
-       alt="Special Collections Library Homepage with search, showcasing the collections on the homepage"
-        caption="Figure 7: Special Collections homepage on the new website"
-        width="100%"
-        height="100%"
-      />
-    </div>
-     <h2>Hours Pages</h2>
-    <p>
-      To modernize how library and branch hours were managed and displayed, our team transitioned to a new backend system. We selected Springshare as the platform for inputting hours and leveraged its API to dynamically retrieve and display hours for the main library and all branch locations.
-      I developed a new hours page based on designs by our UX Designer, Shelby Kroske. The interface presents a clear week view of all library hours (Figure 8) and allows users to seamlessly switch to a month view for any selected library (Figure 9). Shelby and I collaborated closely to ensure the mobile experience was equally effective, carefully designing and implementing responsive layouts for both the week (Figure 10) and month (Figure 11) views to ensure clarity and usability on smaller screens.
-    </p>
-    <div class="grid grid-cols-2 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
-      <Figure
-        path="/src/assets/images/weekView.png"
-        alt="Screenshot of a webpage showing library hours in a week view"
-        caption="Figure 8: Week view of library hours on the new website"
-        width="100%"
-        height="100%"
-      />
-      <Figure
-        path="/src/assets/images/monthView.png"
-       alt="Screenshot of a webpage showing library hours in a month view"
-        caption="Figure 9: Month view of library hours on the new website"
-        width="100%"
-        height="100%"
-      />
-      <Figure
-        path="/src/assets/images/mobileWeekView.png"
-        alt="Screenshot of a webpage showing library hours in a week view on a mobile device"
-        caption="Figure 10: Week view of library hours on the new website on a mobile device"
-        width="100%"
-        height="100%"
-      />
-      <Figure
-        path="/src/assets/images/mobileMonthView.png"
-        alt="Screenshot of a webpage showing library hours in a month view on a mobile device"
-        caption="Figure 11: Month view of library hours on the new website on a mobile device"
-        width="100%"
-        height="100%"
-      />
-    </div>
-     <h2>Library Spaces Discovery Interface Redesign and Development</h2>
-     <p>
-      Inspired by the work of NCSU Libraries, we set out to redesign and enhance the interface used by patrons to explore and discover library spaces. The previous system (Figure 12) featured a Netflix-style horizontal scrolling layout, which presented significant accessibility challenges and limited user interaction.
-     </p>
-     <p>
-      Collaborating with UX Designer Shelby Kroske, we envisioned a new interface that would be fast, responsive, and intuitive. This effort required extensive research into both user-centered design principles and technical implementation strategies. Shelby designed a dynamic, list-style interface that adapts in real time to user preferences, offering a more accessible and streamlined experience.
-     </p>
-     <p>
-      On the development side, I built a custom Drupal module capable of querying our search index to retrieve available space data. The module dynamically updates the displayed records based on user-selected filters, ensuring a seamless and personalized discovery process (Figure 13). I took extra care to ensure that this new interface is accessible by having it tested by our students in the Accessibility unit and addressing their concerns from the early stages of development.
-     </p>
-     <div class="grid grid-cols-2 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
-      <Figure
-        path="/src/assets/images/oldSpaces.png"
-        alt="Screenshot of a webpage showing library spaces in a grid layout"
-        caption="Figure 12: Discover library spaces on the old website"
-        width="100%"
-        height="100%"
-      />
-      <Figure
-        path="/src/assets/images/newSpaces.png"
-       alt="Screenshot of a webpage showing library spaces in a list layout"
-        caption="Figure 13: Discover library spaces interface on the new website"
-        width="100%"
-        height="100%"
-      />
-    </div>
-    <p>The new version of our main library website was launched on Aug 17th, 2023.</p>
-    <ButtonLink
-      path="https://www.lib.msu.edu/"
-      target=""
-    >
-      Visit the new MSU Library website
-    </ButtonLink>
-  </div>
 </Layout>

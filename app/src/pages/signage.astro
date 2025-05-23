@@ -6,66 +6,61 @@ import {RESEARCH_ICONS} from "@/data/researchIcons";
 import Figure from "@/components/ui/Figure.astro";
 import ProfilePictures from '@/assets/profile_pictures.png'
 ---
-
 <Layout title="Sruthin Gaddam | Digital Signage Development">
-  <div class="prose max-w-none">
-    <h1 class="text-3xl font-bold mb-8">Digital Signage Development</h1>
-
-    <div class="mb-12">
-        <p>
-            WebUX team had been using a vendor product, to power the building’s digital signage. However, the system was plagued with software bugs and lacked desired features. For instance, it failed to display hours of operation and persisted in showing outdated maps on the screens, even though the correct maps had been uploaded into the system. These ongoing frustrations motivated us to develop a custom, in-house solution for digital signage.
-        </p>
-        <p> 
-            Shelby Kroske spearheaded the design of the new Digital Signage system, while I took the lead on its development with Shelbie Vilag. Austin Deneau and I identified the need for a Progressive Web App (PWA) that could self-update and refresh content at regular intervals. This venture pushed us into uncharted territory, requiring us to learn new technologies. We adopted Angular, a well-known web framework for building PWAs, and ventured into Python development for the first time to create the backend of the application. Below are screenshots of our old system (Figure 1) and the new home-grown system (Figure 2).
-        </p>
-        <div class="grid grid-cols-2 mt-3 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
-           
-            <Figure
-                path="/src/assets/images/oldSignage.png"
-                alt="A webpage showing hours of operation and upcoming events"
-                caption="Figure 1: Homepage of the vendor based digital signage system at the MSU Libraries"
-                width="100%"
-                height="100%"
-            />
-             <Figure
-                path="/src/assets/images/newSignage.png"
-                alt="A webpage showing weather information, hours of operation and upcoming events"
-                caption="Figure 2: Homepage of the new digital signage system at the MSU Libraries"
-                width="100%"
-                height="100%"
-            />
-        </div>
-        <h2>Application Development</h2>
-        <p> 
-            From the beginning of the project, we emphasized a clean architectural separation between the frontend and backend components. The backend was developed using Flask, a lightweight and flexible Python web framework, which served as a secure backend and API layer. It was responsible for managing sensitive data—such as API keys—and delivering content to the frontend through RESTful endpoints. To ensure data integrity and security, access to the backend was protected with an authentication system.
-        </p>
-        <p> 
-            One of the key challenges I encountered was my limited prior experience with both Angular and Flask. I embraced a hands-on, learn-as-you-go approach, which not only accelerated our learning curve but also encouraged innovative problem-solving. This mindset proved especially valuable when tackling performance and caching issues.
-        </p>
-        <p> 
-            To improve image loading performance while maintaining up-to-date content, we implemented a cache-busting strategy by appending unique hashes to image filenames. This allowed browsers to cache assets efficiently while still fetching the latest versions when updates occurred. Additionally, we built a custom API endpoint that could remotely trigger browser refreshes, ensuring that users always saw the most current data without manual intervention.
-        </p>
-        <h2>Busigness Digital Signage Development</h2>
-        <p> 
-            Next, I led the development of the digital signage system for the Business Library. Working under a tight deadline, I began by implementing a secure authentication system that allowed business library staff to log into a newly built backend. This backend enabled business library staff to easily add, edit, and manage content without technical assistance. Once the content management system was in place, I developed a RESTful API to retrieve and serve the content dynamically to the front-end display.
-        </p>
-        <p> 
-            The final phase involved designing and deploying a user-friendly interface tailored for the  Business Library’s digital screens. Shelby Kroske led the design of the Business Library signage while me and Shlebie Vilag developed the frontend (Figure 3) to display the content on the digital signs.
-        </p>
-        <p> 
-            The system went live on April 15, 2025, and has since empowered the Business Library team to independently manage their digital signage with efficiency.
-        </p>
-         <div class="grid grid-cols-1 mt-3 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
-           
-            <Figure
-                path="/src/assets/images/busSignage.png"
-                alt="A webpage showing hours of operation, upcoming events and exam week hours"
-                caption="Figure 3: Homepage of the Business Library digital signage system"
-                width="100%"
-                height="100%"
-            />
-             
+    <div class="prose max-w-none">
+        <h1 class="text-3xl font-bold mb-8">Digital Signage Development</h1>
+        <div class="mb-12">
+            <p>
+                WebUX team had been using a vendor product, to power the building’s digital signage. However, the system was plagued with software bugs and lacked desired features. For instance, it failed to display hours of operation and persisted in showing outdated maps on the screens, even though the correct maps had been uploaded into the system. These ongoing frustrations motivated us to develop a custom, in-house solution for digital signage.
+            </p>
+            <p> 
+                Shelby Kroske spearheaded the design of the new Digital Signage system, while I took the lead on its development with Shelbie Vilag. Austin Deneau and I identified the need for a Progressive Web App (PWA) that could self-update and refresh content at regular intervals. This venture pushed us into uncharted territory, requiring us to learn new technologies. We adopted Angular, a well-known web framework for building PWAs, and ventured into Python development for the first time to create the backend of the application. Below are screenshots of our old system (Figure 1) and the new home-grown system (Figure 2).
+            </p>
+            <div class="grid grid-cols-2 mt-3 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
+                <Figure
+                    path="/src/assets/images/oldSignage.png"
+                    alt="A webpage showing hours of operation and upcoming events"
+                    caption="Figure 1: Homepage of the vendor based digital signage system at the MSU Libraries"
+                    width="100%"
+                    height="100%"
+                    />
+                <Figure
+                    path="/src/assets/images/newSignage.png"
+                    alt="A webpage showing weather information, hours of operation and upcoming events"
+                    caption="Figure 2: Homepage of the new digital signage system at the MSU Libraries"
+                    width="100%"
+                    height="100%"
+                    />
+            </div>
+            <h2>Application Development</h2>
+            <p> 
+                From the beginning of the project, we emphasized a clean architectural separation between the frontend and backend components. The backend was developed using Flask, a lightweight and flexible Python web framework, which served as a secure backend and API layer. It was responsible for managing sensitive data—such as API keys—and delivering content to the frontend through RESTful endpoints. To ensure data integrity and security, access to the backend was protected with an authentication system.
+            </p>
+            <p> 
+                One of the key challenges I encountered was my limited prior experience with both Angular and Flask. I embraced a hands-on, learn-as-you-go approach, which not only accelerated our learning curve but also encouraged innovative problem-solving. This mindset proved especially valuable when tackling performance and caching issues.
+            </p>
+            <p> 
+                To improve image loading performance while maintaining up-to-date content, we implemented a cache-busting strategy by appending unique hashes to image filenames. This allowed browsers to cache assets efficiently while still fetching the latest versions when updates occurred. Additionally, we built a custom API endpoint that could remotely trigger browser refreshes, ensuring that users always saw the most current data without manual intervention.
+            </p>
+            <h2>Busigness Digital Signage Development</h2>
+            <p> 
+                Next, I led the development of the digital signage system for the Business Library. Working under a tight deadline, I began by implementing a secure authentication system that allowed business library staff to log into a newly built backend. This backend enabled business library staff to easily add, edit, and manage content without technical assistance. Once the content management system was in place, I developed a RESTful API to retrieve and serve the content dynamically to the front-end display.
+            </p>
+            <p> 
+                The final phase involved designing and deploying a user-friendly interface tailored for the  Business Library’s digital screens. Shelby Kroske led the design of the Business Library signage while me and Shlebie Vilag developed the frontend (Figure 3) to display the content on the digital signs.
+            </p>
+            <p> 
+                The system went live on April 15, 2025, and has since empowered the Business Library team to independently manage their digital signage with efficiency.
+            </p>
+            <div class="grid grid-cols-1 mt-3 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
+                <Figure
+                    path="/src/assets/images/busSignage.png"
+                    alt="A webpage showing hours of operation, upcoming events and exam week hours"
+                    caption="Figure 3: Homepage of the Business Library digital signage system"
+                    width="100%"
+                    height="100%"
+                    />
+            </div>
         </div>
     </div>
-  </div>
 </Layout>

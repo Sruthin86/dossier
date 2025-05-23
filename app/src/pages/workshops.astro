@@ -1,0 +1,82 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BetterIcon from "@/components/ui/BetterIcon.astro";
+import List from "@/components/ui/List.astro";
+import {RESEARCH_ICONS} from "@/data/researchIcons";
+import Figure from "@/components/ui/Figure.astro";
+import ProfilePictures from '@/assets/profile_pictures.png'
+import Citation from "@/components/ui/Citation.astro";
+import ButtonLink from "@/components/ui/ButtonLink.astro";
+---
+<Layout title="Sruthin Gaddam | Workshops">
+    <div class="prose max-w-none">
+        <h1 class="text-3xl font-bold mb-8">Workshops</h1>
+        <div class="border-b-4 border-b-gray-700 pb-4">
+            <h2>A UX Journey: Identifying Problems and Solutions and Improving User Experience in Increments</h2>
+            <Citation
+                authors="Gaddam, S., & Kroske, S. (2024, July 30)."
+                title="A UX journey: Identifying problems and solutions and improving user experience in increments"
+                type="Conference workshop"
+                info="Digital Library Federation, East Lansing, MI."
+                extlink="https://doi.org/10.17605/OSF.IO/9Y2SC"
+            />
+            <p>
+                A workshop to introduce User Journey Mapping, demonstrating how it can be conducted with limited resources. We presented a case study on how we used UX testing techniques to improve our website and shared our upcoming test plan. Participants were given scenarios to identify pain points on various sites. Participants were organized into groups, chose websites, identified common tasks, and documented user journeys, feelings, and suggestions for improvement (Figure 1).
+            </p>
+            <p>
+                We also explored Affinity Mapping, grouping data by category, identifying issues and pain points, and ranking them based on complexity and impact to help prioritize UX improvements as group which was part of the workshop (Figure 2).
+            </p>
+            <p>
+                This workshop attracted more than 40 participants at DLF. A participant from the workshop invited us to run the same workshop with the UX researchers at the Society of American Archivists virtually so we had the good fortune of running the same workshop again on Feb 21st, 2025.
+            </p>
+            <div class="grid grid-cols-2 my-3 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
+                <Figure
+                    path="/src/assets/images/uxWorkshop1.png"
+                    alt="Paper with handwritten notes"
+                    caption="Figure 1: User Journey map of a group in the workshop"
+                    width="100%"
+                    height="100%"
+                    />
+                <Figure
+                    path="/src/assets/images/uxWorkshop2.png"
+                    alt="An white poster with colorful sticky notes"
+                    caption="Figure 2: Affinity Mapping activity at the workshop"
+                    width="100%"
+                    height="100%"
+                    />
+            </div>
+            <ButtonLink
+                path="https://forum2024.diglib.org/schedule/"
+                target=""
+                >
+                View DLF Conference Schedule
+            </ButtonLink>
+        </div>
+        <div class="border-b-4 border-b-gray-700 pb-4">
+            <h2>Tracking your work with Git</h2>
+            <Citation
+                authors="Gaddam, S. (2025, Mar 4)."
+                title="Tracking your work with git"
+                type="Conference workshop"
+                info="Software Carpentry Workshop, East Lansing, MI."
+            />
+            <p>
+                As part of an initiative to enhance technical skills within the Michigan State University community, I led a Software Carpentry Workshop in the Digital Scholarship Lab, in collaboration with faculty from ICER. This workshop was open to MSU staff, faculty, students, and community members, and was designed to support both beginners and intermediate users.
+            </p>
+            <p>
+               My contribution focused on teaching a session on using GitHub for project tracking and collaboration. I began by guiding participants through the process of setting up a secure public-private key handshake between their personal computers and GitHub—an essential step for ensuring secure access to the platform.
+            </p>
+            <p>
+                From there, we explored the practical aspects of managing projects on GitHub. Participants learned how to create repositories, make commits, and collaborate effectively with others. Through hands-on exercises, they gained experience in version control, tracking changes, and maintaining a clear project history.
+            </p>
+            <p>
+                The interactive format of the workshop encouraged questions and real-time problem-solving, creating a collaborative and supportive learning environment. By the end of the session, participants left with a solid understanding of GitHub’s capabilities and the confidence to apply these skills to their own work.
+            </p>
+            <ButtonLink
+                path="https://bookings.lib.msu.edu/event/13892556"
+                target=""
+                >
+                View Software Carpentry Workshop Details
+            </ButtonLink>
+        </div>
+    </div>
