@@ -1,0 +1,58 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BetterIcon from "@/components/ui/BetterIcon.astro";
+import List from "@/components/ui/List.astro";
+import {RESEARCH_ICONS} from "@/data/researchIcons";
+import Figure from "@/components/ui/Figure.astro";
+import ProfilePictures from '@/assets/profile_pictures.png'
+---
+
+<Layout title="Sruthin Gaddam | Conferences Attended">
+  <div class="prose max-w-none">
+    <h1 class="text-3xl font-bold mb-8">Conferences Attended</h1>
+    <div class="mb-12">
+    <h2>International Conferences</h2>
+    <List
+            listItems={[
+                "Digital Humanities Sympoium: East Lansing, MI, Apr  7 — 8th, 2025"
+            ]}
+            className="list-disc list-inside"
+        />
+    <h2>National Conferences</h2>
+    <List
+            listItems={[
+                "ALA  2023 Core Forum: New Orleans, LA, Oct 19 — 21th, 2023.",
+                "Digital Library Federation: East Lansing, MI, July  29 — 31st, 2024."
+            ]}
+            className="list-disc list-inside"
+        />
+
+    <h2>Regional Conferences</h2>
+    <List
+            listItems={[
+                "MiALA 2023 Annual Conference: Holland, MI, May 17 — 19th, 2023.",
+                "Software Carpentry Workshop: East Lansing, MI, Mar  26 — 27th, 2024.",
+                 "Helping Serve the Neurodiverse in your Library Community: East Lansing, MI, May 2nd, 2024.",
+                "MiALA 2024 Annual Conference: Kalamazoo, MI, May 15 — 17th, 2024.",
+                "Software Carpentry Workshop: East Lansing, MI, Mar 26 — 27th, 2025.",
+                "MiALA 2025 Annual Conference: Dearborn, MI, May 18 — 20th, 2025."
+            ]}
+            className="list-disc list-inside"
+        />
+
+    <h2>Online Conferences</h2>
+    <List
+            listItems={[
+                "Designing for Digital: Virtual Conference, March 6 — 9th, 2023.",
+                "Deque axe-con: Virtual Conference,  March 15 — 16th, 2023.",
+                "BTAA REI Phase I Workshop: Mar  21 — 22nd, 2024."
+            ]}
+            className="list-disc list-inside"
+        />
+
+
+    
+    
+    </div>
+   </div>
+</Layout>
