@@ -36,9 +36,9 @@ import DataTable from "@/components/ui/DataTable.astro";
                 Below is the subset of the fixes that were identified and remediated:
             </p>
             <ul>
-                <li>Main navigation on all pages has been improved to work with space bar key, previously we only supported the return key.</li>
+                <li>Main navigation on all pages has been improved to work with space bar key—previously we only supported the return key.</li>
                 <li>Invisible headings were added to the events and services section main homepage and all the branch homepages for better screen reader navigation.</li>
-                <li>Pagination has on all search pages has been given the correct landmark.</li>
+                <li>Pagination on all search pages has been given the correct landmark.</li>
                 <li>Pages with mismatched heading order have been corrected.</li>
                 <li>Visual inconsistences on smaller screens where the text is cut off on pages with small headers have been corrected.</li>
                 <li>Improved the screen reader navigation on the Library Spaces page.</li>
@@ -47,7 +47,7 @@ import DataTable from "@/components/ui/DataTable.astro";
         <div class="border-b-4 border-b-gray-700 mb-4">
             <h2>Spring 2024: MSU Library Springshare Apps Remediation</h2>
             <p> 
-                Springshare, a widely used vendor platform in academic libraries, presents a unique set of accessibility challenges—many of which fall outside our direct control due to the proprietary nature of the product. Recognizing the importance of addressing these issues, Austin Deneau and I worked with the LibApps Working Group to escalate accessibility concerns directly to the vendor.
+                Springshare, a widely used vendor platform in academic libraries, presents a unique set of accessibility challenges—many of which fall outside our direct control due to the limited access to the code of the application. Our student employess provided us with a doucment with a11y violations which are beyond our control to fix—recognizing the importance of addressing these issues, Austin Deneau and I worked with the LibApps Working Group to escalate accessibility concerns directly to the vendor.
             </p>
             <p> 
                 While we awaited vendor-level resolutions, we took steps to implement front-end fixes wherever possible. This included targeted improvements to the LibGuides, LibCal, and A–Z Databases interfaces, enhancing usability and compliance with accessibility standards within the constraints of the platform.
@@ -57,8 +57,8 @@ import DataTable from "@/components/ui/DataTable.astro";
             </p>
             <ul>
                 <li>A role attribute was missing on the grid items on the LibCal landing page which was corrected.</li>
-                <li>The links were blending in with the text, a problem that was fixed by adding underlines to links surrounded by text.</li>
-                <li>The color key for the available reservations at the bottom of the table for spaces does not audibly and clearly state its purpose, which was remediated by a striped design to indicate availability.</li>
+                <li>All links in paragraphns were blending in with the text, a problem that was fixed by adding underlines to links surrounded by text.</li>
+                <li>The color for the available reservations at the bottom of the table on all spaces page does not clearly state its purpose, which was remediated by a striped design to indicate availability.</li>
                 <li>Color contrast issues were raised on breadcrumbs in LibGuides, which were addressed.</li>
                 <li>Color contrast issues were raised on buttons in LibGuides, which were addressed.</li>
             </ul>
@@ -92,7 +92,7 @@ import DataTable from "@/components/ui/DataTable.astro";
                 Our students evaluated the ILLiad system for accessibility issues and Austin Deneau and I partnered closely with Devin Laird from the Systems team to address the accessibility issues identified.
             </p>
             <p> 
-                We began by taking an incremental approach to remediation throughout the fall semester. By the end of the term, we had resolved nearly all the issues flagged by our student evaluators. This success reflected not only the strength of their initial assessments but also the effectiveness of our collaborative, cross-functional workflow.
+                We began by taking an incremental approach to remediation throughout the fall semester. By the end of the term, we had resolved nearly all the issues flagged by our student evaluators. This reflected not only the strength of accessibility evaluations but also the effectiveness of our cross-unit collaborations.
             <p>
                 Below is the subset of the fixes that were identified and remediated:
             </p>
@@ -126,7 +126,7 @@ import DataTable from "@/components/ui/DataTable.astro";
                 Our team developed a comprehensive accessibility plan of the Main Library website which included training and testing using automated tools. 
             </p>
             <p> 
-                As part of the plan developed Austin Deneau and I developed a custom accessibility evaluation tool using Python and JavaScript. This prototype application was designed to scan web pages for WCAG 2.2 AA compliance, identify violations, and generate a detailed spreadsheet of issues. We applied this tool to all 1,378 pages of the Main Library website, uncovering a wide range of accessibility (A11Y) issues. Below is a row from the of the CSV generated by the tool.
+                As part of the plan developed Austin Deneau and I developed a prototype of a custom accessibility evaluation tool using Python and JavaScript. This prototype application was designed to scan web pages for WCAG 2.2 AA compliance, identify violations, and generate a detailed spreadsheet of issues. We applied this tool to all 1,378 pages of the Main Library website, uncovering a wide range of accessibility (A11Y) issues. Below is a row from the of the CSV generated by the tool.
             </p>
             <DataTable
             headers={["Page Url", "Help", "Message", "Description", "id", "impact", "tags"]}
