@@ -1,0 +1,56 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BetterIcon from "@/components/ui/BetterIcon.astro";
+import List from "@/components/ui/List.astro";
+import {RESEARCH_ICONS} from "@/data/researchIcons";
+import Figure from "@/components/ui/Figure.astro";
+import ProfilePictures from '@/assets/profile_pictures.png'
+import Citation from "@/components/ui/Citation.astro";
+import ButtonLink from "@/components/ui/ButtonLink.astro";
+---
+<Layout title="Sruthin Gaddam | Publications">
+    <div class="prose max-w-none">
+        <h1 class="text-3xl font-bold mb-8">Publications</h1>
+         <div class="border-b-4 border-b-gray-700 pb-4">
+            <h2>MakeAtState open-source application code</h2>
+            <Citation
+                authors="Gaddam, S., Moriarty, J., Peterson,S., & Sanchez, J. (2023, July 11)."
+                title="MakeAtState open-source application code."
+                type="Computer software"
+                info="GitHub repository."
+                extlink="https://github.com/MSU-Libraries/MakeAtState"
+            />
+            <p>
+                I lead the development efforts of MakeAtState which is an open-source software application written using PHP to manage fabrication project submissions. The application allows users to upload files for 3D printing, laser cutting, CNC routing, etc. Staff use the application to keep track of the jobs submitted by users, download files, provide a price and delivery date estimate, and notify the users when the project is ready for pick up. Communication with the user about their project is made easy through a messaging feature. This application is available on GitHub under the Apache license and can be freely used.
+            </p>
+            <ButtonLink
+                path="https://makeatstate.lib.msu.edu/"
+                target=""
+                >
+                MakeAtState Application
+            </ButtonLink>
+        </div>
+        <div class="pb-4">
+            <h2>Grass Roots UX Testing at the MSU Libraries: Our Triumphs and Pitfalls</h2>
+            <Citation
+                authors="Gaddam, S., Kroske, s., Sanchez,J., & Vilag, S."
+                title="Grass roots UX testing at the MSU libraries: Our triumphs and pitfalls."
+                type="Journal article"
+                info="Weave: Journal of Library User Experience."
+            />
+            <p>
+                This article is sumbitted to Weave: Journal of Library User Experience. It is currently under review and we are working with the reviewers to make the necessary changes to get it published.
+            </p>
+            <strong>Abstract:</strong>
+            <p>
+                This paper provides a case study on how consistent UX testing can improve the digital experience for library patrons. Every month for the last year, we planned and carried out various UX testing on the [...] Library website. Our research included a comparative analysis of other library websites and user testing of our own library website. The comparative analysis granted us insight about the services featured on other library websites, and the information architecture of those sites. From our own testing, we discovered areas of our site that serve our users well, and other areas where there are pain points. This testing allowed us to come up with tangible solutions we were able to apply to our website.
+            </p>
+            <ButtonLink
+                path="/src/assets/pdfs/WeaveArticle.pdf"
+                target=""
+                >
+                Read the draft article
+            </ButtonLink>
+        </div>
+    </div>
+</Layout>
