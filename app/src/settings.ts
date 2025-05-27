@@ -13,7 +13,7 @@ export const social = {
 	email: 'gaddamsr@msu.edu',
 	linkedin: '',
 	x: '',
-	github: '',
+	github: 'https://github.com/Sruthin86',
 	gitlab: '',
 	scholar: '',
 	inspire: '',

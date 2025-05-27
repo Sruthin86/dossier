@@ -2,22 +2,28 @@
 import { Image } from 'astro:assets'
 
 import SocialIcons from './SocialIcons.astro'
+import ButtonLink from './ButtonLink.astro'
 
 
 const {fullName, title, institute, profilePicture} = Astro.props
 ---
 <div class='flex-1'>
   <h1 class='text-4xl font-bold mb-4'>
-    Welcome! I'm <span class='text-secondary'>{fullName}</span>
+    Welcome! I'm <span class='text-green-600'>{fullName}</span>
   </h1>
-  <p class='text-xl text-gray-600 mb-4'>{title}{institute ? ` at ${institute}` : ''}</p>
-  <p class='text-lg mb-6'>
-    Brief impactful description of your research focus and academic mission.
-    Highlight your key contributions and areas of expertise.
-  </p>
+  <p class='text-xl text-gray-500 mb-4'>{title}{institute ? ` at ${institute}` : ''}</p>
+  <div class="my-8">
+  <ButtonLink 
+    path='src/assets/pdfs/CV.pdf'
+    target='_blank'
+    class='btn btn-primary'>
+      View Cirriculum Vitae
+   </ButtonLink>
+  </div>
   <div class='flex gap-4'>
     <SocialIcons />
   </div>
+   
 </div>
 <div class='size-72 lg:block hidden'>
   <!-- Add your profile image -->
