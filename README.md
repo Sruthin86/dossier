@@ -70,10 +70,27 @@ docker build --target setup ./ -t dossier:latest
 
 ``` bash
 # Dev instance
-APP_HOST=gaddamsrdossier.devel.lib.msu.edu docker stack deploy -c docker-compose.yml -c docker-compose.dev.yml dossier
+APP_HOST=gaddamsrdossier.devel.lib.msu.edu docker stack deploy -c docker-compose.yml -c docker-compose.dev.yml  dossier
 
 #Prod instance
-APP_HOST=gaddamsrdossier.lib.msu.edu docker stack deploy -c docker-compose.yml -c docker-compose.dev.yml dossier
+APP_HOST=gaddamsrdossier.lib.msu.edu docker stack deploy -c docker-compose.yml -c docker-compose.prod.yml dossier
+```
+
+- Host name for the app is configured in `astro.config.mjs`. Current configuration is documented below.
+
+``` TypeScript
+// https://astro.build/config
+export default defineConfig({
+    integrations: [react(), tailwind(), sitemap()],
+    site: template.website_url,
+    base: template.base,
+    server: {
+        allowedHosts: ['gaddamsrdossier.devel.lib.msu.edu', 'gaddamsrdossier.lib.msu.edu']
+    },
+    devToolbar: {
+        enabled: false
+    }
+});
 ```
 
 [devUrl]: https://gaddamsrdossier.devel.lib.msu.edu

@@ -15,5 +15,8 @@ export default defineConfig({
     base: template.base,
     server: {
         allowedHosts: ['gaddamsrdossier.devel.lib.msu.edu', 'gaddamsrdossier.lib.msu.edu']
+    },
+    devToolbar: {
+        enabled: false
     }
 });
