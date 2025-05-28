@@ -2,4 +2,3 @@
 services:
   app:
     image: dossier:latest
-
