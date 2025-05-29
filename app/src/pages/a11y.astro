@@ -1,0 +1,154 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BetterIcon from "@/components/ui/BetterIcon.astro";
+import List from "@/components/ui/List.astro";
+import {RESEARCH_ICONS} from "@/data/researchIcons";
+import Figure from "@/components/ui/Figure.astro";
+import ProfilePictures from '@/assets/profile_pictures.png'
+import DataTable from "@/components/ui/DataTable.astro";
+---
+<Layout title="Sruthin Gaddam | Accessibility Remediation">
+    <div class="prose max-w-none">
+    <h1 class="text-3xl font-bold mb-8">Accessibility Remediation</h1>
+    <div class="mb-12">
+        <p>
+            In May 2023, I began a secondary assignment with the Accessibility unit at MSU Libraries—a role that has significantly deepened my understanding of inclusive design and the diverse needs of our patrons. Working closely with Heidi Schroeder and Austin Deneau, I’ve had the opportunity to grow both technically and professionally, while contributing to meaningful accessibility initiatives across campus.
+        </p>
+        <p>
+            This role introduced me to a broader network of accessibility professionals at MSU and other institutions in the B1G conference. I’ve participated in numerous campus-wide meetings, gaining insight into institutional priorities and best practices in digital accessibility.
+        </p>
+        <p>
+            I also serve as one of four Digital Accessibility Liaisons at MSU. In this capacity, I meet regularly with colleagues from across the university to share findings, celebrate achievements, and raise concerns related to digital inclusion. 
+            This assignment has been a valuable extension of my work, reinforcing my commitment to accessibility and expanding my impact beyond the library.
+        </p>
+        <p>
+            As part of our ongoing commitment to digital accessibility, our student employees conducted thorough evaluations of several web applications including the MSU Library Website, MSU Library LibGuides and other Springshare apps, the MSU Libraries Catalog, Aeon, and ILLiad systems. Their detailed reports provided a strong foundation for targeted remediation efforts.
+        </p>
+        <div class="border-b-4 border-b-gray-700 mb-4">
+            <h2>Spring & Fall 2023: MSU Main Library Website Remediation</h2>
+            <p> 
+                As part of our ongoing accessibility efforts, Austin Deneau and I collaborated to curate a targeted list of web pages for our student employees to evaluate. This strategic selection ensured that the testing process focused on high-impact areas of the site, where accessibility improvements would benefit the widest range of users.
+            </p>
+            <p>
+                The students’ evaluations were instrumental in uncovering key accessibility barriers. Their findings helped us pinpoint the root causes of several accessibility issues, enabling us to implement solutions. 
+            </p>
+            <p>
+                Below is the subset of the fixes that were identified and remediated:
+            </p>
+            <ul>
+                <li>Main navigation on all pages has been improved to work with space bar key—previously we only supported the return key.</li>
+                <li>Invisible headings were added to the events and services section main homepage and all the branch homepages for better screen reader navigation.</li>
+                <li>Pagination on all search pages has been given the correct landmark.</li>
+                <li>Pages with mismatched heading order have been corrected.</li>
+                <li>Visual inconsistences on smaller screens where the text is cut off on pages with small headers have been corrected.</li>
+                <li>Improved the screen reader navigation on the Library Spaces page.</li>
+            </ul>
+        </div>
+        <div class="border-b-4 border-b-gray-700 mb-4">
+            <h2>Spring 2024: MSU Library Springshare Apps Remediation</h2>
+            <p> 
+                Springshare, a widely used vendor platform in academic libraries, presents a unique set of accessibility challenges—many of which fall outside our direct control due to the limited access to the code of the application. Our student employess provided us with a doucment with Accessibility violations which are beyond our control to fix—recognizing the importance of addressing these issues, Austin Deneau and I worked with the LibApps Working Group to escalate accessibility concerns directly to the vendor.
+            </p>
+            <p> 
+                While we awaited vendor-level resolutions, we took steps to implement front-end fixes wherever possible. This included targeted improvements to the LibGuides, LibCal, and A–Z Databases interfaces, enhancing usability and compliance with accessibility standards within the constraints of the platform.
+            </p>
+            <p>
+                Below is the subset of the fixes that were identified and remediated:
+            </p>
+            <ul>
+                <li>A role attribute was missing on the grid items on the LibCal landing page which was corrected.</li>
+                <li>All links in paragraphns were blending in with the text, a problem that was fixed by adding underlines to links surrounded by text.</li>
+                <li>The color for the available reservations at the bottom of the table on all spaces page does not clearly state its purpose, which was remediated by a striped design to indicate availability.</li>
+                <li>Color contrast issues were raised on breadcrumbs in LibGuides, which were addressed.</li>
+                <li>Color contrast issues were raised on buttons in LibGuides, which were addressed.</li>
+            </ul>
+        </div>
+        <div class="border-b-4 border-b-gray-700 mb-4">
+            <h2>Spring 2024: MakeAtState Application Remediation</h2>
+            <p> 
+                MakeAtState is a homegrown, open-source application developed to support the MSU Libraries Makerspace, enabling patrons to submit and manage 3D printing and vinyl cutting requests. As part of our commitment to accessibility and inclusive service design, we partnered with the University of Tennessee–Knoxville, who were contracted by MSU Libraries to conduct a comprehensive accessibility evaluation of the application.
+            </p>
+            <p> 
+                Their team conducted a detailed review of the MakeAtState web interface and identified color contrast violations on buttons that required remediation. I was able to quickly address these issues.
+            </p>
+        </div>
+        <div class="border-b-4 border-b-gray-700 mb-4">
+            <h2>Spring 2024: Spartan Digital Media Lending Remediation</h2>
+            <p> 
+                Spartan Digital Media Lending, an open-source platform built by Indiana University Bloomington, is used to lend digital media available at the MSU libraries. We partnered with University of Tennessee–Knoxville to evaluate the application for accessibility problems and report their findings.  These findings provided me with a clear roadmap for improving the application’s usability and accessibility for all users. This was especially a challenging project as the application was written in Ruby-on-Rails, a programming language that I’m not familiar with and involved learning a new web framework.
+            </p>
+            <p>
+                Below is the subset of the fixes that were identified and remediated:
+            </p>
+            <ul>
+                <li>Pages that had skipped heading levels were identified and fixed.</li>
+                <li>Input fields that have missing labels were identified and fixed.</li>
+                <li>Color contrast issues across the entire application were addressed.</li>
+            </ul>
+        </div>
+        <div class="border-b-4 border-b-gray-700 mb-4">
+            <h2>Fall 2024: ILLiad System Remediation</h2>
+            <p> 
+                Our students evaluated the ILLiad system for accessibility issues and Austin Deneau and I partnered closely with Devin Laird from the Systems team to address the accessibility issues identified.
+            </p>
+            <p> 
+                We began by taking an incremental approach to remediation throughout the fall semester. By the end of the term, we had resolved nearly all the issues flagged by our student evaluators. This reflected not only the strength of accessibility evaluations but also the effectiveness of our cross-unit collaborations.
+            <p>
+                Below is the subset of the fixes that were identified and remediated:
+            </p>
+            <ul>
+                <li>Headings and content across the application had incorrect roles which were fixed.</li>
+                <li>Buttons across the application had color contrast issues which were fixed.</li>
+                <li>Zooming was disabled on mobile devices. A fix was identified and implemented</li>
+                <li>Added skip links for better navigation to users using assistive technologies.</li>
+            </ul>
+        </div>
+        <div class="border-b-4 border-b-gray-700 mb-4">
+            <h2>Spring 2025: Aeon System Remediation</h2>
+            <p> 
+                In the spring, we shifted our focus to the Aeon system. To maintain momentum and ensure accountability, we established weekly meetings with Devin Laird. This consistent cadence allowed us to make steady progress, and we are on track to complete the remediation process by the end of the summer.
+            </p>
+            <p>
+                Below is the subset of the fixes that were identified and remediated:
+            </p>
+            <ul>
+                <li>Fixed incorrect and misleading button links on the login pages.</li>
+                <li>Added selection capabilities using Enter and Spacebar for combo boxes and checkboxes.</li>
+                <li>Pages that had skipped heading levels were identified and fixed.</li>
+            </ul>
+        </div>
+        <div class="mb-4">
+            <h2>Fall 2024 & Spring 2025: MSU Libraries Title II Response</h2>
+            <p>
+                In response to the updated Title II regulations under the Americans with Disabilities Act (ADA)—which now mandate that all digital content from state and local governments meet WCAG 2.1 AA standards. These new rules, finalized by the Department of Justice in 2024, apply to websites, mobile apps, and digital documents, and are designed to ensure equitable access for individuals with disabilities.
+            </p>
+            <p> 
+                Our team developed a comprehensive accessibility plan of the Main Library website which included training and testing using automated tools. 
+            </p>
+            <p> 
+                As part of the plan developed Austin Deneau and I developed a prototype of a custom accessibility evaluation tool using Python and JavaScript. This prototype application was designed to scan web pages for WCAG 2.2 AA compliance, identify violations, and generate a detailed spreadsheet of issues. We applied this tool to all 1,378 pages of the Main Library website, uncovering a wide range of accessibility (A11Y) issues. Below is a row from the of the CSV generated by the tool.
+            </p>
+            <DataTable
+            headers={["Page Url", "Help", "Message", "Description", "Id", "Impact", "Tags"]}
+            rows={[
+            [
+            "https://lib.msu.edu/callnumbers",
+            "Ensure touch targets have sufficient size and space",
+            "All touch targets must be 24px large, or leave sufficient space",
+            "Target has insufficient size because it is partially obscured (smallest space is 212.1px by 22.9px, should be at least 24px by 24px)",
+            "target-size",
+            "Serious",
+            "sensory-and-visual-cues, wcag22aa, wcag258"
+            ],
+            ]}
+            classes="w-full border-4 border-gray-900"
+            />
+            <p> 
+                In parallel, the MSU Office of Civil Rights conducted a manual audit of a subset of the site. Their findings closely aligned with our automated results and were categorized into Critical, Significant, and Minor violations. This dual approach—automated scanning and manual review—gave us a comprehensive view of the site’s accessibility landscape.
+            </p>
+            <p> 
+                To date, we’ve resolved all but one critical issue, addressed the majority of significant violations, and begun correcting minor ones. This work is ongoing, and I remain committed to achieving full compliance with the new Title II standards. Our goal is to ensure that the Main Library website is not only legally compliant but also inclusive, navigable, and usable for all visitors, regardless of ability.
+            </p>
+        </div>
+    </div>
+</Layout>

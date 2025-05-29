@@ -1,0 +1,6 @@
+---
+services:
+  app:
+    image: dossier:latest
+    volumes:
+      - ./app:/app

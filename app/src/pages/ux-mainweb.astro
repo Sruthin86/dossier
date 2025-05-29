@@ -1,0 +1,143 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BetterIcon from "@/components/ui/BetterIcon.astro";
+import List from "@/components/ui/List.astro";
+import {RESEARCH_ICONS} from "@/data/researchIcons";
+import Figure from "@/components/ui/Figure.astro";
+import ProfilePictures from '@/assets/profile_pictures.png'
+import ButtonLink from "@/components/ui/ButtonLink.astro";
+---
+<Layout title="Sruthin Gaddam | Library Website UX Research">
+    <div class="prose max-w-none">
+        <h1 class="text-3xl font-bold mb-8">Library Website UX Research</h1>
+        <div class="mb-12">
+            <p>
+                In February 2023, I started UX testing on the new library website, and I embraced the opportunity to fulfill a personal professional goal—designing and administering a comprehensive UX test. The primary objective of this initiative was to uncover potential usability challenges that users might encounter while navigating the new site. My approach focused not only on identifying these pain points but also on analyzing their root causes and providing actionable recommendations to guide further development.
+            </p>
+            <p> 
+                In collaboration with Joshua Sanchez and Shelby Kroske, we explored and selected several UX research methodologies to gain meaningful insights into user interactions. The methods chosen included:
+            </p>
+            <ul>
+                <li>User Journey Mapping – Observing users as they complete specific tasks to understand their behaviors and thought processes.</li>
+                <li>A/B testing – Showing two different versions of the site and asking users for feedback</li>
+                <li>Heuristic Analysis – Evaluating the site’s usability against established best practices and criteria.</li>
+                <li>Graffiti Walls – Gathering user feedback on the site’s design and functionality anonymously through sticky notes on a large board/wall</li>
+            </ul>
+            <h2>User Journey Mapping</h2>
+            <p> 
+                We began our testing efforts with the User Journey Mapping activity. We were fortunate to receive enthusiastic participation from library faculty, staff, and student employees. Joshua, Shelby, and I  took turns facilitating the sessions, during which participants were asked to complete a series of tasks across various sections of the site—such as the homepage, hours pages, search interface, and events listings—while verbalizing their thoughts.
+                We documented participants’ actions, emotional responses, and suggestions for improvement using a collaborative digital workspace, Miro and FigJam (Figure 1). This initial round of testing included 12 participants, which was extended to a broader student audience.
+            </p>
+            <div class="grid grid-cols-1 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
+                <Figure
+                    path="/src/assets/images/userJourneyMap.png"
+                    alt="Main Library Homepage with search, events, and services sections"
+                    caption="Figure 1: User Journey Map created in FigJam"
+                    width="100%"
+                    height="100%"
+                    />
+            </div>
+            <h3>Sample User Journey Map Tasks</h3>
+            <List
+            listItems={[
+            "Say you are an instructor looking for an instruction room in the Main Library that can accommodate 30 students  and has dimmable lights. Please show us how you would find an appropriate space",
+            "How many spaces are located in the Gast Business Library?",
+            "Search for “User experience”. Identify any differences between the results you see in the Articles box to what you expected.",
+            "You have a study group of 5 people and are looking for a space to meet. Your group needs a whiteboard. Can you find a space in the main library that can accommodate your group?",
+            "Using the DSL homepage show us how you would book a project room."
+            ]}
+            className="list-disc list-inside"
+            />
+            <p> 
+                We conducted this activity  once a month throughout 2023 & 2024. Our findings using various UX research techniques informed the following changes on the homepage, hours pages, search pages, spaces pages, and branch library homepages on the new library website.
+            </p>
+            <div class="grid grid-cols-1 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
+                <Figure
+                    path="/src/assets/images/hoursUpdates.png"
+                    alt="Showing the hours page transitioning from a GO button to an APPLY button"
+                    caption="Figure 2: Updates to the Hours form based on feedback from User Journey Maps. Our users were having trouble understanding the functionality of the GO button— which led to the inception of a different layout with an APPLY button"
+                    width="100%"
+                    height="100%"
+                    />
+            </div>
+            <h2>Graffiti Walls</h2>
+            <p> 
+                Me and Shelby Kroske, our UX Designer, used Graffiti Walls (Figure 3), a UX technique which provides space, either on a wall or a white board where people can openly and anonymously share their feelings. We setup a poster of our homepage on the first floor of the library asking our patrons to add comments using sticky notes. This helped us reconsider the “What’s Going On” section on the first iteration of our homepage and transformed it into the Services section that we currently have (Figure 4).
+            </p>
+            <div class="grid grid-cols-1 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
+                <Figure
+                    path="/src/assets/images/graffitiWalls.png"
+                    alt="Stickly notes on the stuck on the poster library website homepage"
+                    caption="Figure 3: Anonymous feedback on the library website homepage from our patrons using sticky notes"
+                    width="100%"
+                    height="100%"
+                    />
+                <Figure
+                    path="/src/assets/images/homeUpdates.png"
+                    alt="Arrows the homepage transitioning from a 'What's Going On' section to a 'Services' section"
+                    caption="Figure 4:Showing the transformation of the What's Going On section"
+                    width="100%"
+                    height="100%"
+                    />
+            </div>
+            <h2>A/B Testing</h2>
+            <p> 
+                Me and Shelby Kroske used A/B testing, a UX technique, where we compared the performance and usability of two different versions of our search interface.  We setup a table by the main entrance of the main library with a bowl of candy to hand-out and asked users about several search interfaces we developed. Users clearly gravitated towards the version A as they liked the descriptions shown to them without hovering on an information icon (Figure 5). Users also preferred the bento layout (Figure 6) to an accordion layout (Figure 7) which I also developed to present as an option.
+            </p>
+            <div class="grid grid-cols-1 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
+                <Figure
+                    path="/src/assets/images/abTesting.png"
+                    alt="Stickly notes on the stuck on the poster library website homepage"
+                    caption="Figure 5: Two different versions of search for comparison"
+                    width="100%"
+                    height="100%"
+                    />
+            </div>
+            <div class="grid grid-cols-2 mt-3 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
+                <Figure
+                    path="/src/assets/images/bentoSearch.png"
+                    alt="Stickly notes on the stuck on the poster library website homepage"
+                    caption="Figure 6: Bento search layout used for A/B testing"
+                    width="100%"
+                    height="100%"
+                    />
+                <Figure
+                    path="/src/assets/images/accordionSearch.png"
+                    alt="Stickly notes on the stuck on the poster library website homepage"
+                    caption="Figure 7: Accordion search layout used for A/B testing"
+                    width="100%"
+                    height="100%"
+                    />
+            </div>
+             <h2>Heuristic Analysis</h2>
+             <p>
+                As part of our ongoing efforts to improve the usability of MSU Libraries’ digital platforms, our team conducted a Heuristic Analysis—a structured UX research method used to identify usability issues by evaluating interfaces against established principles.
+            </p>
+            <p>
+                Working alongside Austin Deneau, Shelby Kroske, and Shel Vilag, we selected a representative set of pages from the Main Library website, LibGuides, and LibCal applications. We then invited Bonnie Russell and Stephanie Vasko from the College of Arts and Letters to serve as evaluators for this activity.
+            </p>
+            <p>
+                Using the <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">10 usability heuristics</a> defined by Nielsen & Norman, along with their associated <a href="https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/">severity rating scale</a>, participants assessed each interface for potential usability problems. Their observations were systematically documented in a shared spreadsheet (see Figure 8), which served as a central repository for findings and recommendations.
+            </p>
+            <p>
+                We used the How, Now, Wow matrix (Figure 9) to group the findings into a matrix which helped us prioritize the issues and come-up with a plan of action to fix the identified problems. 
+            </p>
+            <div class="grid grid-cols-2 mt-3 gap-3 bg-gray-800 bg-clip-padding rounded px-2">
+                <Figure
+                    path="/src/assets/images/heuristicAnalysis.png"
+                    alt="Screenshot of the spreadsheet used for Heuristic Analysis"
+                    caption="Figure 8: Spreadsheet used for Heuristic Analysis"
+                    width="100%"
+                    height="100%"
+                    />
+                <Figure
+                    path="/src/assets/images/impactMatrix.png"
+                    alt="A matrix with 2 columns and 2 rows with sticky notes on it"
+                    caption="Figure 9: Prioritization of the findings using the How, Now, Wow matrix"
+                    width="100%"
+                    height="100%"
+                    />
+            </div>
+        </div>
+    </div>
+</Layout>

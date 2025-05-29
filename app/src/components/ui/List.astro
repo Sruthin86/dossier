@@ -1,0 +1,11 @@
+---
+const {listItems} = Astro.props
+---
+<ul class="grid gap-2 mb-12 list-none">
+  {
+    listItems.map((item) => (
+     
+        <li class="bg-gray-400 text-gray-700 rounded-[.25rem] p-3 dark:bg-gray-700 dark:text-stone-100">{item}</li>
+    ))
+  }
+</div>

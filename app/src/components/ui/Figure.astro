@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets'
+
+const {path, alt, caption, width, height} = Astro.props
+---
+
+<figure class="mt-1">
+    <a href={path} target="_blank" rel="noopener noreferrer">
+        <Image
+            src={path}
+            alt={alt}
+            class='w-full mt-1 rounded-[.25rem]'
+            loading="lazy"
+            width={width}
+            height={height}
+        />
+    </a>
+    <figcaption class='text-center text-sm text-gray-400 mt-2'>{caption}</figcaption>
+</figure>

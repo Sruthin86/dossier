@@ -1,0 +1,62 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BetterIcon from "@/components/ui/BetterIcon.astro";
+import List from "@/components/ui/List.astro";
+import {RESEARCH_ICONS} from "@/data/researchIcons";
+import Figure from "@/components/ui/Figure.astro";
+import ProfilePictures from '@/assets/profile_pictures.png'
+import Citation from "@/components/ui/Citation.astro";
+import ButtonLink from "@/components/ui/ButtonLink.astro";
+---
+<Layout title="Sruthin Gaddam | Publications">
+    <div class="prose max-w-none">
+        <h1 class="text-3xl font-bold mb-8">Publications</h1>
+         <div class="border-b-4 border-b-gray-700 pb-4">
+            <h2>MakeAtState open-source application code</h2>
+            <Citation
+                authors="Gaddam, S., Moriarty, J., Peterson,S., & Sanchez, J. (2023, July 11)."
+                title="MakeAtState open-source application code."
+                type="Computer software"
+                info="GitHub repository."
+                extlink="https://github.com/MSU-Libraries/MakeAtState"
+            />
+            <p>
+                I led the development of MakeAtState, an open-source software application built with PHP to streamline the submission and management of fabrication projects. Designed specifically for makerspaces, the application supports a wide range of fabrication services including 3D printing, laser cutting, and CNC routing.
+            </p>
+            <p>
+                MakeAtState allows users to upload project files, specify job details, and communicate directly with makerspace staff. On the administrative side, staff can manage incoming submissions, download files, provide pricing and delivery estimates, and notify users when their projects are ready for pickup. A built-in messaging feature facilitates seamless communication between users and staff throughout the project lifecycle.
+            </p>
+            <p>
+                The application is freely available on GitHub under the Apache license, making it accessible for other institutions or makerspaces looking to implement a similar solution. 
+            </p>
+            <ButtonLink
+                path="https://makeatstate.lib.msu.edu/"
+                target=""
+                >
+                MakeAtState Application
+            </ButtonLink>
+        </div>
+        <div class="pb-4">
+            <h2>Grass Roots UX Testing at the MSU Libraries: Our Triumphs and Pitfalls</h2>
+            <Citation
+                authors="Gaddam, S., Kroske, s., Sanchez,J., & Vilag, S."
+                title="Grass roots UX testing at the MSU libraries: Our triumphs and pitfalls."
+                type="Journal article"
+                info="Weave: Journal of Library User Experience."
+            />
+            <p>
+                This article is sumbitted to Weave: Journal of Library User Experience. It is currently under review and we are working with the reviewers to make the necessary changes to get it published.
+            </p>
+            <strong>Abstract:</strong>
+            <p>
+                This paper provides a case study on how consistent UX testing can improve the digital experience for library patrons. Every month for the last year, we planned and carried out various UX testing on the [...] Library website. Our research included a comparative analysis of other library websites and user testing of our own library website. The comparative analysis granted us insight about the services featured on other library websites, and the information architecture of those sites. From our own testing, we discovered areas of our site that serve our users well, and other areas where there are pain points. This testing allowed us to come up with tangible solutions we were able to apply to our website.
+            </p>
+            <ButtonLink
+                path="/src/assets/pdfs/WeaveArticle.pdf"
+                target=""
+                >
+                Read the draft article
+            </ButtonLink>
+        </div>
+    </div>
+</Layout>

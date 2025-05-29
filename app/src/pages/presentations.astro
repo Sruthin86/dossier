@@ -1,0 +1,187 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BetterIcon from "@/components/ui/BetterIcon.astro";
+import List from "@/components/ui/List.astro";
+import {RESEARCH_ICONS} from "@/data/researchIcons";
+import Figure from "@/components/ui/Figure.astro";
+import ProfilePictures from '@/assets/profile_pictures.png'
+import Citation from "@/components/ui/Citation.astro";
+import ButtonLink from "@/components/ui/ButtonLink.astro";
+---
+<Layout title="Sruthin Gaddam | Presentations">
+    <div class="prose max-w-none">
+        <h1 class="text-3xl font-bold mb-8">Presentations</h1>
+         <div class="border-b-4 border-b-gray-700 pb-4">
+            <h2>Users first: Designing and Seveloping a New Library Website that’s Usable, Accessible, and Inclusive</h2>
+            <Citation
+                authors="Gaddam, S., Kroske, S., & Sanchez, J. (2023, March 9)."
+                title="Users first: Designing and developing a new library website that’s usable, accessible, and inclusive"
+                type="Conference Presentation"
+                info="Designing for Digital, Austin, TX."
+                link="src/assets/videos/D4D_Presentation.mp4"
+            />
+            <p>
+                Presenting at this MiALA was a personal milestone and a professional goal I had set for the year. Our session focused on the successes and lessons learned throughout a multi-year project to redesign the MSU Libraries website. We shared how we gathered user feedback from faculty, staff, students, and library employees—and how that feedback shaped a user-centered, data-driven design process.
+            </p>
+            <p>
+                A key part of our presentation explored the UX challenges we encountered. We discussed how we navigated situations where user feedback conflicted with established UX best practices, and the tension between relying on stakeholder input versus trusting our own expertise and design instincts. We also reflected on the complexities of sustaining momentum and vision over the course of a long-term project.
+            </p>
+            <ButtonLink
+                path="https://designingfordigital.com/2023-conference-program/"
+                target=""
+                >
+                Designing for Digital Conference Schedule
+            </ButtonLink>
+        </div>
+        <div class="border-b-4 border-b-gray-700 pb-4">
+            <h2>Automated Accessibility Testing: Advantages and Pitfalls</h2>
+            <Citation
+                authors="Finkenbinder, K., Gaddam, S., & Sanchez, J. (2023, March 13)."
+                title="Automated accessibility testing: Advantages and pitfalls."
+                type="Presentation"
+                info="Library Accessibility Alliance."
+                extlink="https://vimeo.com/807904631"
+            />
+            <p>
+                The Library Accessibility Alliance webinar provided a valuable platform to showcase how accessibility is a foundational principle in the development of the new MSU Libraries website. During this presentation, we emphasized our commitment to building an accessible, inclusive, and responsive web presence that serves all users.
+            </p>
+            <p>
+                We shared insights into our design philosophy and the tools we use to ensure accessibility and sustainability throughout the development process. A key focus of our talk was the automation of accessibility testing using Cypress.io, an open-source end-to-end testing framework, in combination with the cypress-axe plugin. This setup allows us to integrate accessibility checks directly into our development workflow.
+            </p>
+            <p>
+               In addition to automated testing, we highlighted the importance of manual efforts—particularly in developing robust keyboard navigation from the ground up, which cannot be fully validated by automated tools. We also discussed our use of tools like Colorblindly, a Chrome extension that simulates various types of color vision deficiencies, helping us design with visual accessibility in mind.
+            </p>
+            <ButtonLink
+                path="https://libraryaccessibility.org/events/automated-accessibility-testing-advantages-and-pitfalls"
+                target=""
+                >
+                Event Information
+            </ButtonLink>
+        </div>
+        <div class="border-b-4 border-b-gray-700 pb-4">
+            <h2>UX singularity: Making Usable, Accessible and Inclusive Websites</h2>
+            <Citation
+                authors="Finkenbinder, K., Gaddam, S., & Sanchez, J. (2023, May 17)."
+                title="UX singularity: Making usable, accessible and inclusive websites."
+                type="Conference Presentation"
+                info="Michigan Academic Library Association. Holand, MI."
+                link="src/assets/pdfs/UX_Singularity.pdf"
+            />
+            <p>
+                In this presentation, we team reflected on the processes, practices, tools, and lessons learned over our two-year journey developing the new MSU Libraries website. We shared how we adopted Agile methodology and the Scrum framework to guide our software development, enabling us to stay flexible, iterative, and collaborative throughout the project.
+            </p>
+            <p>
+                A central theme of the presentation was our commitment to creating a digital presence that is usable, accessible, and inclusive. Aimed at small teams building web applications in academic library settings, we highlighted several key initiatives—such as practicing inclusive design, integrating librarians and staff into every stage of the design and development process, and applying a range of UX methodologies to inform our decisions.
+            </p>
+            <p>
+                We also discussed the meaningful changes that resulted from putting these practices into action, offering insights and strategies that other teams can adapt. This presentation was not only a chance to share our triumphs but also to contribute to a growing conversation about thoughtful, user-centered design in academic environments.
+            </p>
+            <ButtonLink
+                path="https://miala.org/2023_ac_breakout_session_descr.php"
+                target=""
+                >
+                MiALA 2023 Conference Schedule
+            </ButtonLink>
+        </div>
+        <div class="border-b-4 border-b-gray-700 pb-4">
+            <h2>Pilcrow: Our Multi-year Journey in Building an Open Source Open Peer Review Application</h2>
+            <Citation
+                authors="Gaddam, S., & Sattler, K. (2023, Oct 20)."
+                title="Pilcrow: Our multi-year journey in building an open source open peer review application."
+                type="Conference Presentation"
+                info="Academic Library Association Core Forum. New Orleans, LA."
+                link="src/assets/pdfs/PilcrowPresentation.pdf"
+            />
+            <p>
+                Pilcrow is an open peer review application developed with the goals to encourage an attitude shift when doing peer reviews from criticism to helping improve submissions through dialogue and to fight against biases in publication
+            </p>
+            <p>
+                In our presentation, we focused on how small teams can successfully build open-source applications using existing open-source tools and platforms. We shared our development journey, highlighting the agile and Scrum methodologies that structured our virtual collaboration, as well as the accessibility and user testing practices that guided our design decisions.
+            </p>
+            <p>
+                A key part of the session was a live demonstration of Pilcrow, which is freely available on GitHub for anyone to use or adapt. We emphasized how our team prioritized inclusivity and usability throughout the development process, ensuring that the platform is not only functional but also welcoming to a diverse range of users.
+            </p>
+            <ButtonLink
+                path="https://alacoreservices.org/forum-archive/2023/events/pilcrow-an-open-peer-review-application/index.html"
+                target=""
+                >
+                Academic Library Association Core Forum Session Details
+            </ButtonLink>
+        </div>
+        <div class="border-b-4 border-b-gray-700 pb-4">
+            <h2>Exploring Cutting Edge Alternatives to Google Analytics: Things We Learned Along the Way</h2>
+            <Citation
+                authors="Brandon, J., & Gaddam, S. (2023, Oct 21)."
+                title="Exploring cutting edge alternatives to google analytics: Things we learned along the way."
+                type="Conference Presentation"
+                info="Academic Library Association Core Forum. New Orleans, LA."
+                link="src/assets/pdfs/Matomo.pdf"
+            />
+            <p>
+                In this presentation, we shared our team’s exploration of Matomo, an open-source web analytics platform, as a privacy-conscious alternative to Google Analytics. We began by outlining the motivations behind our shift—chief among them being the desire for full control over tracked data and the ability to implement advanced privacy protections for our users.
+            </p>
+            <p>
+                We highlighted several key benefits of using Matomo, including its flexible permission system that allows us to assign different levels of access to library staff, its robust API for integrating data into visualization tools, and its capability to automate email reports on usage statistics. These features have empowered us to better understand how patrons engage with our site while maintaining a strong commitment to user privacy.
+            </p>
+            <p>
+                Our presentation also included findings from a comparative analysis between Google Analytics and Matomo, which played a critical role in our decision-making process. We concluded by discussing a range of free and paid Matomo plugins that can extend the platform’s functionality—offering deeper insights into user behavior and enhancing our ability to make data-informed decisions.
+            </p>
+            <ButtonLink
+                path="https://alacoreservices.org/forum-archive/2023/events/exploring-cutting-edge-alternatives-to-google-analytics-things-we-learned-along-the-way/index.html"
+                target=""
+                >
+                Academic Library Association Core Forum Session Details
+            </ButtonLink>
+        </div>
+        <div class="border-b-4 border-b-gray-700 pb-4">
+            <h2>A Year at the Library: Our UX Journey</h2>
+            <Citation
+                authors="Gaddam, S., Kroske, S., & Vilag, S. (2024, May 16)."
+                title="A year at the library: Our UX journey."
+                type="Conference Presentation"
+                info="Michigan Academic Library Association, Kalamazoo, MI."
+                link="src/assets/pdfs/UXJourney.pdf"
+            />
+            <p>
+                This presentation offered an in-depth look at our ongoing efforts to engage with users and continuously improve the MSU Libraries website through feedback and iteration. Over the past year, we conducted monthly UX testing sessions with a diverse user group that included students, staff, faculty, and community members.
+            </p>
+            <p>
+                We shared the various techniques our team employed to gather meaningful insights—from usability testing and provided a deeper dive into how we analyzed this feedback and translated it into actionable improvements.
+            </p>
+            <p>
+                We also highlighted the incremental changes made to key features of our still-nascent website, demonstrating how user input directly shaped the evolution of the site’s functionality and user experience. This iterative, user-centered approach has been central to our development process and continues to guide our work moving forward.
+            </p>
+            <ButtonLink
+                path="https://miala.org/2024_ac_breakout_session_descr.php"
+                target=""
+                >
+                MiALA 2024 Conference Schedule
+            </ButtonLink>
+        </div>
+        <div class="pb-4">
+            <h2>Navigating Title II: Steering the MSU Libraries Towards Compliance</h2>
+            <Citation
+                authors="Deneau, A., Gaddam, S., & Schroeder, H. (2025, May 20)."
+                title="Navigating title II: Steering the MSU libraries towards compliance."
+                type="Conference Presentation"
+                info="Michigan Academic Library Association, Flint, MI."
+                link="src/assets/pdfs/TitleII.pdf"
+            />
+            <p>
+                In this presentation, we detailed our approach to advancing digital accessibility at MSU Libraries in preparation for compliance with the updated ADA Title II regulations.
+            </p>
+            <p>
+                We emphasized our overall approach, including the development of sustainable workflows, prioritization of high-impact content, and the importance of strong partnerships across the library and campus.
+            </p>
+            <p>
+                Additionally, we shared specific goals and actions we’ve taken to improve accessibility—from integrating accessibility checks into our development process to expanding training and awareness among staff. This presentation underscored our commitment to building a digital environment that is inclusive, compliant, and user-centered.
+            </p>
+            <ButtonLink
+                path="https://miala.org/2025_ac_breakout_session_descr.php"
+                target=""
+                >
+                MiALA 2025 Conference Schedule
+            </ButtonLink>
+        </div>
+    </div>
+</Layout>

@@ -1,0 +1,543 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BetterIcon from "@/components/ui/BetterIcon.astro";
+import List from "@/components/ui/List.astro";
+import {RESEARCH_ICONS} from "@/data/researchIcons";
+import Figure from "@/components/ui/Figure.astro";
+import ProfilePictures from '@/assets/profile_pictures.png'
+import ButtonLink from "@/components/ui/ButtonLink.astro";
+import Citation from "@/components/ui/Citation.astro";
+---
+<Layout title="Sruthin Gaddam | Self-Evaluations">
+    <div class="prose max-w-none">
+        <h1 class="text-3xl font-bold mb-8">Self-Evaluations</h1>
+        <div class="border-b-4 border-b-gray-700 pb-4">
+            <h2>Dec 2022 — March 2023</h2>
+            <h3>Self Evaluation of Performance of Responsibilities & Annual Goals</h3>
+            <p>
+                I’m very thankful for all the opportunities I had working with the WebUX team, DDaS team, and the Collaborative Community Review team this year. I believe that the massive projects that we undertook would immensely improve the user experience of our patrons on several digital applications that we offer. I continued to  collaborate with departments within the library such as the Makerspace to overhaul the MakeAtState application and teams outside of the Library such as MSU IT to integrate the MakeAtState application with OKTA, an identity management system offered by MSU IT. I’m fortunate to have colleagues and student employees eager to participate in UX testing activities which helped me organize and moderate UX testing on the new Library website. In addition, I collaborated with the WebUX team to develop the new MSU Library website and other projects that are handled by the team on a daily basis.
+            </p>
+            <h4>Main Website Redesign & Migration</h4>
+            <p>
+                The WebUX team is helming the redesign and development of the Main Library website which gave the opportunity to closely work with all the team members and pull my weight towards the completion of the project. As a part of this project, under the guidance of our team I took lead in developing the Main Library Search, Main Library Homepage, and Branch Library Homepages in late fall of 2023.
+            </p>
+            <p>
+                Development of the Main Library Search had its own set of challenges as we decided to make our search module configurable by non developers from the start. This enables all Drupal admins to set the number of results per box, set the results box title, show or remove a results box from the display, set the results box order, etc. New functionality was added where users can view results from a single source without being overwhelmed by the bento box view. EDS and FOLIO API’s were leveraged to bring in the call number and availability of books and e-books at the request of our librarians and this data is presented to the viewers in a usable manner. Additional challenges were encountered when the Springshare API wasn’t able to search Databases which were overcome by writing a Drupal module that fetches all the Databases from Springshare and indexes into our backend search engine SOLR. This functionality has also been extended to Course Reserves where the data fetched from the FOLIO API’s is indexed into our backend search engine. This helped us enable features like keyword highlighting, searching by course number, instructor name, course name, etc. Boolean searches were also enabled, further improving the functionality over the existing search. Development of the search was wrapped up in December 2022 and passed onto our Web Advisory Group for testing in January 2023.
+            </p>
+            <p>
+                I started focusing on developing the Main Library homepage as it was one of my goals for the year– this included Quick links, Events & Workshops, News, Exhibits, and the What’s going on sections. The  Events & Workshops, News, Exhibits section had us pull data from external sources such as Springshare events; this led to writing a new Drupal module that has the ability to to fetch events from Springshare. This was further improved where the module can filter events by categories. Both News and Exhibits were built inside Drupal and the What’s going on section contained featured items from News and Exhibits. Wrapping up our homepage in January 2023, I moved on to building out the Murray & Hong Special Collections homepage, Creative Solutions Center homepage, and the Makerspace homepage by February 2023.
+            </p>
+            <h4>UX Testing for the Main Website</h4>
+            <p>
+                As we entered February 2023, the WebUX team completed development of several major pieces of the main website such as Main Library Homepage, Hours pages, Main Library search, News, Events & Workshops, Exhibits, etc. It was time for us to start UX testing on the new site.
+            </p>
+            <p>
+                This was our first foray into UX Testing and I took this opportunity to accomplish another goal of mine for the year– developing and administering a UX test. The prime focus of the UX testing process was to identify any pain points that users might experience while performing specific tasks on the new website. This process also entails analyzing the reasons behind the pain points, and guiding the development by providing actionable insights to address the issues.
+            </p>
+            <p>
+                I collaborated with Joshua Sanchez and Shelby Kroske to identify several UX research and testing methodologies that we could employ to gain insights on how patrons will use our new site. The methods that were identified are User Journey Mapping, which involves observing users when they are performing a task, Five Second Tests, which involves gathering first impressions on the site, and Heuristic Analysis which is to measure the usability of our site against a set of predefined criteria. We started our UX testing with User Journey Mapping research activity.
+            </p>
+            <p>
+                We were fortunate enough to have eager participants from the library faculty, staff, and student employees. We took turns administering the research activity where our participants were asked to perform a series of tasks on the homepage, hours pages, search pages, and events pages– they were asked to think out loud while performing the tasks. The steps taken to perform the tasks, their feelings, and opportunities for improvement were recorded in a collaborative workspace called Miro. This research activity was performed with12 participants and we are planning to invite students to this activity in the week March 20th. This activity helped us identify a few places on the new website that need improvements and we are thrilled about our findings. We are enthusiastic about making these improvements and streamline our UX testing process.
+            </p>
+            <h4>MakeAtState Application Redesign and Migration</h4>
+            <p>
+                Makerspace uses 3DPrime, an application written in PHP back in 2018 to support both the patrons and Makerspace staff to submit and print 3D models. As the years progressed the application was getting outdated in terms of design and the underlying technology. Jamie Moriarty, our Makerspace Coordinator requested an overhaul of the application, reimagining the 3D print submission workflow process. 
+            </p>
+            This project was on a tight schedule to complete and had external dependencies such as communicating with Central IT to use MSU’s OKTA  identity management system. One of the initial steps to ensure the success of this project was to update the underlying technologies such as migrating to a newer version of PHP, updating the underlying theme to Bootstrap5 which gave the application a new look, and using current DevOps practices such as Doker & Docker Swarm along with traefik which makes the deployment and maintenance a smooth sailing process. 
+            <p>
+                The next step was to work closely with Jamie Moriarty to bring her vision to life. This included removing the existing job submission workflow and building a new workflow that supports adding multiple files into a project and submitting them as one job. This feature was a massive improvement to the user experience of our patrons which enabled them to have multiple items in a print job, mimicking some of the most popular ecommerce sites like Amazon. 
+            </p>
+            <p>
+                This also resulted in changes to the staff workflow on how these jobs with multiple files should be handled. A creative solution was implemented where the staff who are processing these requests can see all the files in a job and set the prices for each of the files individually. The application then calculates  the total price and notifies the user via email. The patron can then accept the price which is when the printing begins or can request the staff to modify the job and files in the job as needed.
+            </p>
+            <p>
+                This project also needed integration with MSU’s identity management system. MSU uses OKTA to authenticate affiliated users which gave me an opportunity to collaborate with Jami Baker from Central IT and integrate OKTA authentication into the MakeAtState application. This allows patrons to use their MSU credentials to login to the site and submit their print jobs. This change also involves figuring out the logout system where an option will be provided to the patron to just logout of the MakeAtState application or logout of all MSU applications at once. Finally I collaborated with Renee McConahy who assisted in setting up the production servers and helped us get past the finish line and launch the application for public use.
+            </p>
+            <h4>Additional Work</h4>
+            <p>
+                In addition to the projects discussed above I worked closely with the CCR (Collaborative Community Review) team to develop the Pilcrow application. My collaboration with the team ended in December 2022. Other regular duties of mine include supporting our library staff and faculty to update their web pages, add additional features to the existing library website and the intranet site, maintenance of the MakeAtState application, providing analytics data as requested by our staff and faculty, and supporting Systems unit to pull data from the FOLIO API as needed. 
+            </p>
+            <h3>Self Evaluation of Scholarly and Creative Activities</h3>
+            <h4>Presentations</h4>
+            <h5 class="font-semibold">Automated Accessibility Testing: Advantages and Pitfalls</h5>
+            <Citation
+                authors="Finkenbinder, K., Gaddam, S., & Sanchez, J. (2023, March 13)."
+                title="Automated accessibility testing: Advantages and pitfalls."
+                type="Presentation"
+                info="Library Accessibility Alliance."
+                extlink="https://vimeo.com/807904631"
+                />
+            <p>
+                Library Accessibility Alliance webinar provided us an opportunity to share how accessibility is a core foundation to the development of the MSU Libraries new website and our commitment to create an accessible, inclusive, and responsive web presence for the MSU Libraries. We took this opportunity to share our design processes, and tools we use for the development of an accessible and sustainable website. 
+            </p>
+            <p>
+                We discussed the process of automating accessibility testing using Cypress.io,  an open source end-to-end testing framework used in conjunction with cypress-axe, a plugin for Cypress. In addition to automated testing, we talked about developing keyboard navigation from the ground up, which cannot be not verified by the automated tools. Our usage of tools such as Colorblindly, a chrome extension that simulates various inabilities to distinguish color has also been discussed as a part of this presentation. 
+            </p>
+            <h5 class="font-semibold">Users first: Designing and Seveloping a New Library Website that’s Usable, Accessible, and Inclusive</h5>
+            <Citation
+                authors="Gaddam, S., Kroske, S., & Sanchez, J. (2023, March 9)."
+                title="Users first: Designing and developing a new library website that’s usable, accessible, and inclusive"
+                type="Conference Presentation"
+                info="Designing for Digital, Austin, TX."
+                link="src/assets/videos/D4D_Presentation.mp4"
+                />
+            <p>
+                This presentation focused on our successes and lessons learned over a multi-year project . We talked about succeeding in collecting an unprecedented amount of user feedback from faculty, staff, students, and library employees and how we incorporated that feedback to make user-centered and data-driven decisions throughout our redesign.We emphasized on UX related challenges that we faced including determining what to do when user feedback goes against UX best practices, the tension between when to rely on group and stakeholder design vs our own expertise and skill sets, and how completing a multi-year project. I’m really impressed with this conference and presenting at this conference with my team was a goal of mine for the year.
+            </p>
+            <h5 class="font-semibold">A Handbook of UX Research & Design in Libraries: Book report</h5>
+            <Citation
+                authors="Gaddam, S. (2023, March 2)."
+                title="A handbook of ux research & design in libraries"
+                type="Book Report"
+                info="East Lansing."
+                extlink="https://docs.google.com/presentation/d/1cZfqCAvAsP8L4ZAJadX_1SyOGaIXmsGkkQTMHHzi5sg/edit?usp=sharing"
+                />
+            <p>
+                This presentation is based on the book titled A Handbook of UX Research & Design in Libraries by Andy Priestner and emphasizes on the importance of UX Research in the Libraries. This presentation informs about the Discover, Define, Develop, Deliver steps in the UX Research & Design process and expands on them by providing various research methods with examples and activities to engage the participants. This was also one of my goals for the year – which included understanding the research methods, putting them into practice, and presenting on what I learned.
+            </p>
+            <h5 class="font-semibold">MSU Libraries’ Accessibility First Design & Development Practices</h5>
+            <Citation
+                authors="Finkenbinder, K., Gaddam, S., & Sanchez, J. (2023, February 22)."
+                title="MSU libraries’ accessibility first design & development practices"
+                type="Presentation"
+                info="WebDev Cafe, East Lansing, MI."
+                />
+            <p>
+                This presentation elaborates on our accessibility first practices to web development. Our team has been very diligent in identifying new technologies that help us test our website effectively and efficiently for accessibility issues and we took this opportunity to share our practices to the wider MSU community. Our team presented on our usage of open source testing framework Cypress.io and how we incorporated it into our development stack to help us identify accessibility problems and fix them during the development process.
+            </p>
+            <h5 class="font-semibold">MSU Libraries’ Accessibility First Design & Development Practices</h5>
+            <Citation
+                authors="Brandon, J., Finkenbinder, K., Gaddam, S., Sanchez, J., & Vilag, S. (2023, January 9)."
+                title="MSU libraries’ accessibility first design & development practices"
+                type="Presentation"
+                info=" Drupal Birds of a Feather Flock Together"
+                />
+            <p>
+                This presentation was our entry ticket to Drupal birds of a feather flock together cohort, which contains individuals from various academic institutions in the U.S. and Canada who use Drupal as their content management system. This helped us demonstrate our accessibility first web development practices and  gain entry to the cohort which was a goal of mine for the year.
+            </p>
+            <h4>Conferences Attended/Upcoming</h4>
+            <ul>
+                <li>Designing for Digital: Austin, TX, March 6 – 9th, 2023.</li>
+                <li>Deque axe-con: Virtual Conference,  March 15 – 16th, 2023.</li>
+                <li>MiALA 2023 Annual Conference: Holland, MI, May 17 – 19th, 2023.</li>
+            </ul>
+            <h4>Continuous Education</h4>
+            <h5 class="font-semibold">Forcontu Expert in Drupal Back-end Development</h5>
+            <p>
+                A book by Forcontu that helped me understand and learn the back-end development for Drupal content management system. The knowledge gained from this will be used to write custom modules, views, and configurations in Drupal to assist in our web development.
+            </p>
+            <h5 class="font-semibold">Forcontu Expert in Drupal Front-end Development</h5>
+            <p>
+                A book by Forcontu which helped me understand and learn the front-end development for Drupal content management system. The knowledge gained from this book will be used to theme the new main library website for desktop, tablet, and mobile devices.
+            </p>
+            <h5 class="font-semibold"> A Handbook of UX Research & Design in Libraries</h5>
+            <p>
+                A book by Andy Priestner which talks about various UX research methods that can be employed in the libraries and understanding the data gathered from UX research. I used UX research techniques discussed in this book on the new website to gain insights into the usability of our new website
+            </p>
+            <h5 class="font-semibold">Certified Kubernetes Administrator (CKA) with Practice Tests</h5>
+            <p>
+                A Udemy course that I’m currently taking to learn Kubernetes, an open-source system for automating deployment, scaling, and management of containerized applications.
+            </p>
+            <h3>Self Evaluation of Service and/or Professional Activities</h3>
+            <h4>MSU Library Committees</h4>
+            <h5 class="font-semibold">Library Environmental Committee</h5>
+            <p>
+                My primary responsibilities with the LEC include volunteering for LEC organized activities such as the Earth Day events which include screening of films in the DSL. Other activities include publishing LEC meeting minutes on the web and keeping the web content up-to-date on the main library website
+            </p>
+            <h5 class="font-semibold">Library Newsletter Committee</h5>
+            <p>
+                My primary responsibilities with the Newsletter Committee include assisting with the development of the newsletter submission form on the MSUL Intranet site, updating the look of the form and metadata to work well on desktop and mobile devices. Additionally I volunteered to review and publish the submitted newsletter articles in December 2022
+            </p>
+            <h4>Professional Organizations and Groups</h4>
+            <h5 class="font-semibold">Drupal birds of a feather flock together cohort</h5>
+            <p>
+                This cohort consists of several academic institutions in the U.S. and Canada. Working with this group involves identifying and tying out new accessibility tools, understanding best practices, contributing to projects identified by the cohort, and supporting each other with our expertise and knowledge where possible.
+            </p>
+            <h5 class="font-semibold">Digital Library Federation Assessment Interest group </h5>
+            <p>
+                DLF Assessment group facilitates conversation and activities related to library assessment projects.  I just joined this group and am excited to learn more about assessment and understand the ongoing work in this space.
+            </p>
+        </div>
+        <div class="border-b-4 border-b-gray-700 pb-4">
+            <h2>2023 — 2024</h2>
+            <h3>Self Evaluation of Performance of Responsibilities & Annual Goals</h3>
+            <p>
+                The last 12 months have been a cluster of great learning opportunities, milestones, and collaborations with units and organizations internal and external to the MSU Libraries. I’m very thankful for the opportunities that I had working with WebUx and Accessibility teams on a myriad of projects, achieving some important milestones both personally and for the Library. Projects that I worked on this year included close collaboration with various units and branches within the library to overhaul their web presence, making them more usable and accessible, and building out the discovery layers for each of the units. I’m grateful for my colleagues who were enthusiastic to build a comprehensive and sustainable UX research/testing process for all the digital platforms built by the WebUx team–which included coming up creative ways to recruit participants, gather feedback, make recommendations and implement improvements to the MSU Library main website and MakeAtState applications on a monthly cycle. This year I had the opportunity to join the Accessibility team which provided me with opportunities  to investigate assistive technologies and testing softwares. This process led to closely working with a great team to make iterative improvements to several digital interfaces built or purchased by the Library.
+            </p>
+            <h4>Main Website Redesign, Migration, & Launch</h4>
+            <p>
+                Our team spearheaded the design development and launch of the MSU Libraries’ main website. It was a 2+ year project and the site was launched in August 2023. As a part of this massive project, with the help of my team, I took a lead in developing the homepages, search & discovery layer, alerts, events and news  sections for all the units in the Library. This involved closely working with unit heads, assessing their requirements–especially for developing the unit specific search which can be easily customizable using the Drupal admin interface, and adding the ability to post unit specific news to their homepages. This also included developing a mobile version of the homepages for all the units in the library and setting up the alerts system which can be targeted to specific branches, a notification indicator that can be used to view branch specific alerts on their respective pages.
+                I had the opportunity to collaborate with Shelby Krose and Shelbie Vilag to do some UX research and completely reimagine the Library Spaces interface. Taking inspiration from some of our peer institutions we developed a new interface to feature all the spaces offered by the MSU Libraries. This provides our patrons with a myriad of filters to precisely identify and reserve a space that suits their needs. This interface also provides options to add new spaces to the system, easily search them, and works across all devices. As we crossed our 6 month mark of launching our website, this new interface has been used 17,064 times. Our analytics indicate that this is one of the most viewed pages from our homepage. 
+            </p>
+            <p>
+                I took the lead on developing/migrating the new interface for MSU Libraries Little Cookbooks collection, a Grant project from Shirley Sliker. Her wishes for keeping the original look and feel of the site was taken into consideration and honored, while overhauling the search interface, adding additional functionality to add and remove filters, and building functionality on the individual record page to browse items from the same publisher or brand. This site is usable on all device types providing identical functionality across all screen sizes.
+            </p>
+            <p>
+                As we are getting close to Beta Launch, which was scheduled for July 2023, I exported all data from Google Analytics from our legacy sites, set up our new Analytics platform Matomo to track visits from our new beta site. This new analytics platform has been extremely helpful in tracking usage on how our patrons are discovering our site, what search engines they are using to find us, the transactions they make on our site, and the external sites they visit from the MSU Libraries website. A problem that we ran into in the days following our launch was that we did account for the amount of load on the servers, which led to some slow loading pages. Our analytics tool indicated that our avg load time on the day of launch was 5.66s. We were able to quickly jump on the problem and with the help form our friendly folks from the Systems unit we were able to quickly get our pages to load faster. Currently our average page load time, counting all 6 months worth of data,  for the homepage is 2.33s.
+            </p>
+            <p>
+                With all aforementioned exciting moments, our new library site was launched on August 17th, 2023. We have made numerous ux and accessibility improvements to the site along with adding new features, constantly taking feedback from the community and quickly acting on them to squash any bugs and improve the user experience. I was also able to extend some of the improvements we made ro our Springshare products such as LibGuides and our Bookings system to keep the look and feel consistent among all our sites.
+            </p>
+            <h4>Redesign of Digital Media Lending Site</h4>
+            <p>
+                Another massive undertaking was the design and development of the theme for the MSU Digital Media Lending site. This is an open-source project named Avalon, developed by Indiana University, Bloomington–used to ingest digital media for patrons to borrow. This application is written in Ruby on Rails, which was a completely new language for me. With the help from my colleagues Shelby Kroske and Shel Vilag, I developed a new MSU Libraries theme for the Avalon code base. This involved us meeting with the IU Bloomington team on a monthly basis, who were a huge help and guided us navigating a new framework. Our team was able to successfully develop the theme for all pages across site, understand the ingest process, and we are working closely with our colleagues from the Systems unit to launch the production site with the MSUL theme hosted on Amazon Web Services.
+            </p>
+            <h4>Creating & Executing UX Research/Testing Process</h4>
+            <p>
+                We began our UX Research/Testing on the main website in the early stages of development. This led to the creation of a robust and sustainable research and testing process to evaluate the usability of the interfaces we are building. My colleagues Austin Deneau, Shelby Kroske and Joshua Sanchez are very enthusiastic about this aspect of the development life cycle. We were able to conduct UX testing on a monthly basis–coming up with creative ways to recruit participants and procuring incentives for folks who are interested in participating in our testing process.
+            </p>
+            <p>
+                We worked closely with all the branch library heads to identify the core functions of their website and created UX tasks around these core functions. The tasks included asking the participants to perform an action, with minimal instruction, and observing and documenting their journey, their feelings, and what they think can be improved to enhance the user experience while performing the tasks. This UX research technique is called User Journey Mapping and used to identify pain points navigating digital interfaces. We identified that our participants are having trouble using the links in the header region on all branch homepages and pointed out that the pages looked too similar where they weren't sure if the page belonged to the main library or one of the branches.
+            </p>
+            <p>
+                We developed multiple Search and Spaces interfaces to perform some A/B testing, which included showing our participants different versions of the same functionality, directly comparing them and documenting how they respond to each version. As a result we updated our search to pull results from 7 different sources which are now displayed in scrollable bento boxes. Our participants pointed out that there was no easy way to get back to the spaces page, after viewing a single page. This led to the addition of a persistent button on all the individual space pages. We also altered the look of the filters, added a clear all filters button and some help text based on the recommendations. These are just some of the numerous other minor and major changes we made to the main library website directly based on the feedback from the UX testing process.
+            </p>
+            <h4>Evaluating Assistive Technology & Testing Softwares</h4>
+            <p>
+                This year I joined the Accessibility team which provided me with opportunities to evaluate and use assistive technologies and accessibility testing tools. I received a copy of Rocket Core reusable smart notebook and pen–which can be used by students to OCR the notes using the accompanying phone app. The assignment was to evaluate the efficacy of these books and pens so they can be put in circulation for the students to use. Our testing surfaced some problems with accompanying software as well as some logistical problems that may arise using these in circulation. With the help of Heidi Schroeder we were able to gain the axe-core pro subscription, which was used to identify accessibility issues that cannot be detected by automatic accessibility testing tools. My colleague Austin Deneau and I share the license; we use it to find and fix accessibility issues on the main website, Springshare products and other applications built by MSU Libraries.
+            </p>
+            <h4>Improving Accessibility of Springshare Products</h4>
+            <p>
+                MSU Libraries uses a plethora of Springshare products such as LibGuides, LibCal, LibAnswers, LibChat, etc. I identified the list of most used pages in LibGuides which was sent to folks at University of Tennessee, Knoxville for evaluation. After we received the report detailing the Accessibility issues from UTK, Austin Deneau and I scheduled a working meeting to identify potential fixes and implement them in the Springshare system for LibGuides. Our student employees worked on a similar evaluation for the LibCal system and we are in the process of applying fixes wherever we can and documenting suggestions for Springshare.
+            </p>
+            <h4>Accessibility Website Redesign</h4>
+            <p>
+                I collaborated with Austin Deneau, Zoë McLaughlin, and Heidi Schroeder to craft a new Accessibility Statement for the MSU Libraries, and overhaul the Accessibility site on the main library website. We focused our efforts on making it easy for our patrons to contact the accessibility team members, find information about the accessibility of our physical and digital spaces and improve the navigation of the site. 
+            </p>
+            <h3>Self Evaluation of Scholarly and Creative Activities</h3>
+            <h4>Presentations</h4>
+            <h5 class="font-semibold">UX singularity: Making Usable, Accessible and Inclusive Websites</h5>
+            <Citation
+                authors="Finkenbinder, K., Gaddam, S., & Sanchez, J. (2023, May 17)."
+                title="UX singularity: Making usable, accessible and inclusive websites."
+                type="Conference Presentation"
+                info="Michigan Academic Library Association. Holand, MI."
+                link="src/assets/pdfs/UX_Singularity.pdf"
+                />
+            <p>
+                This presentation focused on some of our processes, practices, tools, our triumphs, and lessons learned in our two year journey. We discussed Agile methodology and Scrum framework for software development, strides we made to ensure that our digital presence is usable, accessible, and inclusive. 
+            </p>
+            <p>
+                This was geared towards small teams building web applications in academic libraries highlighting several initiatives such as practicing inclusive design, involving librarians and staff effectively every step of the design and development process, discussing various ux methodologies used by our team and the meaningful changes we made by putting them into practice.
+            </p>
+            <h5 class="font-semibold">Pilcrow: Our Multi-year Journey in Building an Open Source Open Peer Review Application</h5>
+            <Citation
+                authors="Gaddam, S., & Sattler, K. (2023, Oct 20)."
+                title="Pilcrow: Our multi-year journey in building an open source open peer review application."
+                type="Conference Presentation"
+                info="Academic Library Association Core Forum. New Orleans, LA."
+                link="src/assets/pdfs/PilcrowPresentation.pdf"
+                />
+            <p>
+                Pilcrow is an open peer review application developed with the goals to encourage an attitude shift when doing peer reviews from criticism to helping improve submissions through dialogue and to fight against biases in publication. This presentation focused on small teams building open-source applications using existing open-source software and tools. This presentation elaborated  on the platforms, and processes including agile/scrum and accessibility and user testing methodologies used for the entirety of our virtual collaboration. During the presentation we demonstrated the application, which is available on GitHub and can be freely used. 
+            </p>
+            <h5 class="font-semibold">Exploring Cutting Edge Alternatives to Google Analytics: Things We Learned Along the Way</h5>
+            <Citation
+                authors="Brandon, J., & Gaddam, S. (2023, Oct 21)."
+                title="Exploring cutting edge alternatives to google analytics: Things we learned along the way."
+                type="Conference Presentation"
+                info="Academic Library Association Core Forum. New Orleans, LA."
+                link="src/assets/pdfs/Matomo.pdf"
+                />
+            <p>
+                This is a presentation on our foray into Matomo, an open-source web analytics platform as an alternative to Google Analytics. We celebrated on why we choose Matomo as an alternative, benefits of using Matomo such as providing full control of tracked data; advanced privacy controls;  ability to assign different levels of access to library staff; Matomo’s API to fetch data and use it in visualization softwares; ability to send automatic emails on usage statistics; etc. We talked about our findings of our comparative analysis between Google Analytics and Matomo that helped us make the decision. Finally discussed some free and paid plugins that can be added to Matomo to provide additional insights on how our patrons engage with our site. 
+            </p>
+            <h4>Open-Source Contributions</h4>
+            <h5 class="font-semibold">MakeAtState open-source application code</h5>
+            <Citation
+                authors="Gaddam, S., Moriarty, J., Peterson,S., & Sanchez, J. (2023, July 11)."
+                title="MakeAtState open-source application code."
+                type="Computer software"
+                info="GitHub repository."
+                extlink="https://github.com/MSU-Libraries/MakeAtState"
+                />
+            <p>
+                I lead the development efforts of MakeAtState which is an open-source software application written using PHP to manage fabrication project submissions. The application allows users to upload files for 3D printing, laser cutting, CNC routing, etc. Staff use the application to keep track of the jobs submitted by users, download files, provide a price and delivery date estimate, and notify the users when the project is ready for pick up. Communication with the user about their project is made easy through a messaging feature. This application is available on GitHub under the Apache license and can be freely used
+            </p>
+            <h4>Exhibits</h4>
+            <p>
+                Accessibility and WebUx  teams collaborated on setting up an exhibit at the MSU Libraries in December 2023. The exhibit titled “Advancing Accessibility: A Timeline” provides a timeline of major advancements and milestones in accessibility spanning the last 5 centuries. I worked closely with Winde Gehringer, Zoe McLaughlin, and Heidi Schroeder to write bibliographic entries for books and physical items in the collection and set up the exhibit on the 2nd floor of the MSU Library. I collaborated with Shelby Kroske and Shel Vilag to develop the <a href="https://lib.msu.edu/exhibits/advancing-accessibility">online version</a> of the exhibit on the MSU Libraries website.
+            </p>
+            <h4>Conferences Attended/Upcoming</h4>
+            <ul>
+                <li>MiALA 2023 Annual Conference: Holland, MI, May 17 – 19th, 2023.</li>
+                <li>ALA  2023 Core Forum: New Orleans, LA, Oct 19 – 21th, 2023.</li>
+                <li>BTAA REI Phase I Workshop: Mar  21 – 22nd, 2024.</li>
+                <li>Software Carpentry Workshop: East Lansing, MI, Mar  26 – 27th, 2024.</li>
+                <li>MiALA 2024 Annual Conference: Kalamazoo, MI, May 15 – 17th, 2024.</li>
+                <li>Digital Library Federation: East Lansing, MI, July  29 – 31st, 2024.</li>
+            </ul>
+            <h4>Continuous Education</h4>
+            <h5 class="font-semibold">Text Analysis Workshop</h5>
+            <ul>
+                <li>This course is geared towards using machine learning to analyze text, generate AI learning models which can be used to analyze text, recognize patterns and generate subject headings.</li>
+                <li>This is a monthly course from Jan - Apr 2024, taught by Devin Higgings from MSU Libraries and Kate Topham from College of Arts and Letters.</li>
+            </ul>
+            <h5 class="font-semibold">CPACC Certification Course</h5>
+            <ul>
+                <li>Certified Professional in Accessibility Core Competencies certification course is a prep course to train professionals to take the CPACC Certification test.</li>
+                <li>This spanned for 10 weeks in summer 2023, taught by Kevin Henley from MSU IT.</li>
+            </ul>
+            <h5 class="font-semibold">The Complete Traefik training Course</h5>
+            <p>
+                A Udemy course to gain understanding and proficiency in Traefik, a reverse proxy service for websites. I created a <a href="https://github.com/Sruthin86/traefik-demo">GitHub repository</a> as a tutorial to help folks learn Traefik
+            </p>
+            <h5 class="font-semibold">Quickstart for GitHub Copilot</h5>
+            <ul>
+                <li>This course is catered for programmers who would like to incorporate AI into their workflow.</li>
+                <li>Co-pilot is an AI pair programmer helping me learn new programming languages such as Ruby on Rails, Bash and GO.</li>
+            </ul>
+            <h3>Self Evaluation of Service and/or Professional Activities</h3>
+            <h4>Library Committees</h4>
+            <h5 class="font-semibold">Library Environmental Committee</h5>
+            <p>
+                This year, I’m the co-chair of the MSU Libraries environmental committee. My primary responsibilities with the LEC include  leading the monthly meetings when the other co-chair is not available, keeping meeting minutes, and volunteering for LEC organized activities. Other activities include publishing LEC meeting minutes on the web and keeping the web content up-to-date on the main library website
+            </p>
+            <h5 class="font-semibold">Library Newsletter Committee</h5>
+            <p>
+                My primary responsibilities with the Newsletter Committee include maintaining the newsletter submission system on the intranet, making improvements based on the suggestions and feedback from the committee members and library staff, and typing up the meeting minutes for the monthly meetings. Additionally I was also the reviewer for newsletter articles in Jan 2024.
+            </p>
+            <h5 class="font-semibold">Diversity Advisory Committee</h5>
+            <p>
+                I was nominated for Diversity in 2023. My role as the communications manager includes organizing the DAC meetings, helping with the DAC retreat, and typing up  the meeting minutes. I’m also a part of the sub-group which is responsible for building the DAC landing page on the main library website and the up-keep of DAC resources on the website
+            </p>
+            <h5 class="font-semibold">Faculty Affairs Committee</h5>
+            <p>
+                I was nominated to the FAC this year. As a member of this committee I had the opportunity to review one secondary assignment and make a recommendation.
+            </p>
+            <h4>Professional Organizations and Groups</h4>
+            <h5 class="font-semibold">Drupal birds of a feather flock together cohort</h5>
+            <p>
+                This cohort consists of several academic institutions in the U.S. and Canada. Working with this group involves identifying and tying out new accessibility tools, understanding best practices, contributing to projects identified by the cohort, and supporting each other with our expertise and knowledge where possible. This year, I lead a sub-group working towards integrating Automated Accessibility testing into software development and deploy pipelines. I gained experience on using Playwright frontend testing tool, created a <a href="https://github.com/Sruthin86/Playwright">GitHub repository</a>, and shared my findings with the group. This is now used by a developers at University of Toronto Libraries
+            </p>
+            <h5 class="font-semibold">Digital Library Federation Review Committee</h5>
+            <p>
+                My participation in the Committee includes reviewing the proposals for the Digital Library Federation. I’m currently in the midst of reviewing 7 proposals for DLF which are due March 17th, 2023.
+            </p>
+            <h5 class="font-semibold">Digital Library Federation Local Organizing Committee</h5>
+            <p>
+                DLF is hosted by MSU Libraries in East Lansing from July 29 – 31st. As a part of the local organizing committee, my responsibilities include helping with the signage for the conference, developing a way finding guide, helping create a list of local activities, eateries, and assisting wherever I can with other logistics for the conference.
+            </p>
+            <h5 class="font-semibold">Software Carpentry Workshop</h5>
+            <p>
+                Software Carpentry Workshop is the collaboration between Digital Scholarship Lab and MSU Institute for Cyber enabled Research(ICER). It was a 2-day workshop and my role was to assist the attendees with programming challenges they encountered during the sessions. 
+            </p>
+            <h4>MSU Library Mentor/Mentee Program</h4>
+            <p>
+                I participated in the MSU Libraries mentorship program as a mentee and was matched with Emilia Marcyk-Taylor as my mentor. We had regular working meetings to receive mentorship and identified the following goals.
+            </p>
+            <ul>
+                <li>Exploring networking opportunities with partners from around the campus.</li>
+                <li>Understanding the Reference model at the MSU Libraries.</li>
+                <li>Exploring avenues for contribution in outside organizations such as ALA, MiALA, Core Forum (a division of ALA), etc.</li>
+                <li>Opportunities to work with students or community patrons to better understand their needs and contribute to their success.</li>
+            </ul>
+            <p>
+                This program has been very helpful, as I was able to present at MiALA, ALA, forge professional relationships with members in the DLF organization, shadow reference librarians at the desk, and enlist students in the reference unit for UX testing.
+            </p>
+        </div>
+        <div class="pb-4">
+            <h2>2024 — 2025</h2>
+            <h3>Self Evaluation of Performance of Responsibilities & Annual Goals</h3>
+            <p>
+                Academic year 2024-2025 provided a whirlwind of new opportunities to learn, grow, and collaborate with colleagues both on and off campus. I’m very happy to forge meaningful relationships with my fellow UX practitioners from College of Arts and Letters and share notes on how to conduct grassroots UX research with limited resources; collaborate with programmers and doctoral candidates from MSU’s Institute for Cyber-Enabled Research (ICER) research to host workshops and office hours to help folks around the campus getting started on Machine Learning and Python projects. Several projects that I worked on this year allowed me to gain new skills which helped me move forward as UX researcher–leading to some highlights which include being asked to run a workshop, training the UX researches at the Society of American Archivists on the UX research methods used at the MSU Libraries. This year also provided opportunities to work closely with the Turfgrass Information Center to overhaul their website, improve usability and user experience of their search and revamp their site navigation. This was a rewarding experience which helped me gain a better understanding of our TIC collection, their users, and the challenges they faced with the old system. I’m also very grateful for several opportunities that I came across this year which lead me to learning new screen reader software on MacOs and writing documentation on how to use it for a professor with different vision abilities.
+            </p>
+            <h4>Turfgrass Information Center Website Redesign, Migration & Launch</h4>
+            <p>
+                As Drupal 7 was approaching the end of life on Jan 5th, 2025 we had tight and immovable deadline to build the new Turfgrass Information Website (https://tic.lib.msu.edu/) using a newer version of the Content Management System (Drupal 10). Under the leadership of Joshua Schanez, I spearheaded the efforts to build the application stack using some cutting edge technologies such as Traefik, a reverse proxy server that helps with url routing. This also made it easy to defend ourselves from numerous bot attacks that targeted our Main website and TIC website. The application stack was also improved from what we had in the previous years which made it easy to share the same code base and build different developer, test, and production instances of the site with relative ease.
+            </p>
+            <p>
+                Establishing the application stack laid the groundwork for the project, while the core focus of the project was to build the numerous search interfaces that search the STAR backend database that the Turfgrass Information Center uses. Shelby Kroske, our lead designer led the efforts to design the new search interfaces and with the direction they provided I built the Basic, Power, Guided, and Thesaurus searches on the new TIC website. The Power and Guided searches, especially saw significant improvements from the old system providing the users abilities to add and remove search terms and group search terms together. The result selection functionality–which allows users to save a set of results also saw significant upgrades as in the count of selected results is updated dynamically and results being pulled from the correct backend database when a user switches between search types.
+            </p>
+            <p>
+                I spearheaded the efforts to align the search design with Shelby's vision, ensuring it met the designer's intended aesthetic and functionality. This ensured that our TIC site was functional, usable and aesthetically pleasing for desktop, tablet and mobile users. Presenting the TIC information on a small screen was a challenge that we overcame by closely collaborating with Andrew and Elizabeth to ensure that it is meeting their needs.
+            </p>
+            Our new TIC site was launched on Jan 6th, 2025 and for the first time we added analytics to the site. This will allow us to track usage on the site, help us identify which searches are popular and the devices that our users use to perform the searches. So far we have 5,529 visits to the site with 44,759 page views and 20,672 unique page views. We also had some unprompted praise from USGA who said “Hadn’t been TGIF in a while, new website look great, and behaves well! Nice work.”.
+            </p>
+            <h4>UX Research for ILS</h4>
+            <p>
+                The ILS unit engaged our team to redesign their homepage and enhance the information architecture, ensuring that content is easily accessible and discoverable. The ILS team also helped us identify a list of users, both internal and external to the library. Our team, consisting of Austin D., Shel V., Shelby K., and myself, conducted interviews with ILS users as part of a User Journey Mapping exercise. This UX research activity aimed to identify pain points within the site and improve the user experience. Through our research, we uncovered several significant issues.
+            </p>
+            <p>
+                Firstly, patrons found the various terminologies used on the site—such as ILS, ILL, Getit@MSU, and Getthis— is confusing, leading to uncertainty about their meanings and purposes. Additionally, users struggled to determine the appropriate navigation process for requesting materials through the ILS system.
+            </p>
+            <p>
+                We also identified multiple design challenges. For instance, the tabs on the ILS homepage lacked clarity, making it unclear whether they were clickable. Furthermore, the branding on the ILLiad system was inconsistent with the main website, creating a disjointed user experience. These findings highlighted critical areas for improvement and will be guiding our efforts to build a more intuitive and cohesive ILS site this summer.
+            </p>
+            <h4>Digital Signage Application Development</h4>
+            <p>
+                Our team had been utilizing FourWinds, a vendor product, to power the building’s digital signage. However, the system was plagued with software bugs and lacked critical features. For instance, it failed to display hours of operation and persisted in showing outdated maps on the screens, even though the correct maps had been uploaded into the system. These ongoing frustrations motivated us to develop a custom, in-house solution for digital signage.
+            </p>
+            <p>
+                Shelby Kroske spearheaded the design of the new Digital Signage system, while Austin Denau and I focused on its development. Together, we identified the need for a Progressive Web App (PWA) that could self-update and refresh content at regular intervals. This venture pushed us into uncharted territory, requiring us to learn new technologies. We adopted Angular, a well-known web framework for building PWAs, and also ventured into Python development for the first time to create the backend of the application.
+            </p>
+            <p>
+                The new system includes functionality for making API calls to retrieve calendar events for various rooms throughout the building, as well as to fetch operating hours and event details for both the main building and its branches. It boasts a refreshed look and enhanced features, such as the ability to display accurate, real-time data on screens, updated building information, and scalability to accommodate additional screens as needed. The redesigned Digital Signage system, which represents a significant technological leap for our team, is set to launch on March 31, 2025. We are hopeful that the new system is more reliable, functional, and provides a memorable experience for building occupants and visitors alike
+            </p>
+            <h4>Evaluating Main Library Website for the New Title II Requirements</h4>
+            <p>
+                The updated Title II requirements under the Americans with Disabilities Act (ADA) emphasize digital accessibility for state, local governments and affiliated institutions. These regulations mandate that websites, mobile apps, and digital content comply with WCAG 2.1 AA standards to ensure accessibility for individuals with disabilities. 
+            </p>
+            <p>
+                In response to these requirements, under the leadership of Heidi Schroeder, Austin Denau and I developed a prototype application using Python and JavaScript. The application was designed to evaluate web pages for WCAG 2.2 AA compatibility. It runs on a designated set of pages, identifies accessibility violations, and generates a spreadsheet detailing the errors. We applied this prototype to all 1,378 pages of the Main Library website, successfully identifying a list of accessibility (A11Y) issues across the site.
+            </p>
+            <p>
+                Additionally, the MSU Office of Civil Rights conducted a manual review of a smaller subset of the website and provided us with a categorized list of issues. Their findings overlapped with the results from our prototype and were grouped into Critical, Significant, and Minor violations. To date, we have resolved all but one of the Critical violations, addressed most of the Significant violations, and corrected a few Minor violations. I’m committed to continuing these efforts until the site achieves full compliance with Title II requirements, ensuring a more accessible and inclusive experience for all users.
+            </p>
+            <h4>Collaborating With the Catalog Team and Systems to Remediate Accessibility Issues Across Various Applications</h4>
+            <p>
+                Our Accessibility Team’s student employees have done an excellent job in their evaluations of the MSU Libraries Catalog, Aeon System, and ILLiad System. Austin Deneau and I took their comprehensive evaluation report and collaborated closely with Devin Laird from the System team to address accessibility issues in both the Aeon and ILLiad systems.
+            </p>
+            <p>
+                We began with the ILLiad system, making incremental improvements throughout the Fall semester. By the end of the semester, we had successfully addressed almost all the issues identified by our student employees. This progress was a testament to our team's dedication and the effectiveness of our collaborative efforts.
+            </p>
+            <p>
+                In Spring 2025, we shifted our focus to the Aeon system. We scheduled weekly meetings with Devin Laird, ensuring a consistent and focused approach to remediation. Our efforts have already yielded significant progress, and we are optimistic about completing the remediation process by the end of the Spring semester.
+            </p>
+            <p>
+                On occasion me and Austin are also called upon to help with the remediation of accessibility issues identified by our student employees and we do make our best efforts to provide a potential technical solution
+            </p>
+            <h3>Self Evaluation of Scholarly and Creative Activities</h3>
+            <h4>Presentations</h4>
+            <h5 class="font-semibold">A Year at the Library: Our UX Journey</h5>
+            <Citation
+                authors="Gaddam, S., Kroske, S., & Vilag, S. (2024, May 16)."
+                title="A year at the library: Our UX journey."
+                type="Conference Presentation"
+                info="Michigan Academic Library Association, Kalamazoo, MI."
+                link="src/assets/pdfs/UXJourney.pdf"
+                />
+            <p>
+                This presentation gave an inside and detailed look into the process of interacting with our users, receiving feedback and iterating on the work we do on a consistent basis. We talked about monthly UX testing activities we engaged in with our users during the past year with our user group which includes students, staff, faculty, and community members. We provided a deeper dive on different techniques used by our team and elaborate on our findings. Finally, discussed the incremental improvements we made to various features improving the UX of our very nascent website. 
+            </p>
+            <h4>Workshops</h4>
+            <h5 class="font-semibold">A UX Journey: Identifying Problems and Solutions and Improving User Experience in Increments</h5>
+            <Citation
+                authors="Gaddam, S., & Kroske, S. (2024, July 30)."
+                title="A UX journey: Identifying problems and solutions and improving user experience in increments"
+                type="Conference workshop"
+                info="Digital Library Federation, East Lansing, MI."
+                extlink="https://doi.org/10.17605/OSF.IO/9Y2SC"
+                />
+            <p>
+                A workshop to introduce User Journey Mapping, demonstrating how it can be conducted with limited resources. We presented a case study on how we used UX testing techniques to improve our website and shared our upcoming test plan. Participants were given scenarios to identify pain points on various sites. Participants were organized into groups, chose websites, identified common tasks, and documented user journeys, feelings, and suggestions for improvement.
+            </p>
+            <p>
+                We also explored Affinity Mapping, grouping data by category, identifying issues and pain points, and ranking them based on complexity and impact to help prioritize UX improvements.
+            </p>
+            <p>
+                This workshop attracted more than 40 participants at DLF. A participant from the workshop invited us to run the same workshop with the UX researchers at the Society of American Archivists virtually so we had the good fortune of running the same workshop again on Feb 21st, 2025.
+            </p>
+            <h5 class="font-semibold">Tracking your work with Git</h5>
+            <Citation
+                authors="Gaddam, S. (2025, Mar 4)."
+                title="Tracking your work with git"
+                type="Conference workshop"
+                info="Software Carpentry Workshop, East Lansing, MI."
+                />
+            <p>
+                In an effort to enhance technical skills within the Michigan State University community, and collaborating with faculty from ICER, we recently held a Software Carpentry Workshop in the Digital Scholarship Lab. As a part of this I taught a workshop on using GitHub to track projects. This workshop was open to MSU staff, faculty, students, and community members, and was specifically designed to cater to both beginners and intermediate users.
+            </p>
+            <p>
+                During the workshop, participants were guided through the foundational steps of using GitHub. I began by demonstrating how to establish a secure public-private key handshake from a personal computer to GitHub, ensuring that everyone could securely connect to the platform. This crucial step set the stage for the rest of the workshop.
+            </p>
+            <p>
+                Next, I delved into the practical aspects of project management on GitHub. Participants learned how to create new projects, make commits, and effectively collaborate with others on the same project. Through hands-on exercises, they gained valuable experience in tracking changes, managing versions, and maintaining a clear project history.The interactive nature of the workshop allowed participants to ask questions and receive real-time assistance, fostering a collaborative learning environment. By the end of the session, attendees had not only gained a solid understanding of GitHub's capabilities but also felt confident in their ability to apply these skills to their own projects.
+            </p>
+            <h4>Certifications</h4>
+            <p>
+                On June 2, 2024 I was awarded the Certified Professional in Accessibility Core Competencies certification. Acquiring this certification was a part of annual goals of 2023-24 and I took the Certification in April 2024. I’m very happy that I passed the exam and became certified.
+            </p>
+            <h4>Posters</h4>
+            <h5 class="font-semibold">Insights from our Web Analytics</h5>
+            <Citation
+                authors="Deneau, A., Gaddam, S., & Kroske, S. (2024, Dec. 8)."
+                title="Insights from our web analytics "
+                type="Poster Presentation"
+                info="MSU Libraries Knowledge and Creativity Exchange, East Lansing, MI."
+                />
+            <p>
+                This poster provides a preview into the quantitative data on how our website is being used. We presented stats on what pages are being used the most and why, our top search terms, and other quantitative data on the usage of our website. We talked about how we are using this data to drive decision making.
+            </p>
+            <h4>Exhibits</h4>
+            <p>
+                Another highlight of the year was displaying an exhibit on the first floor of the MSU Library showcasing several assistive technologies, hardware and collections that are held and used at the MSU Libraries. Under the leadership of Heidi Schroeder, I collaborated with Jonah Magar and curated video games and assistive technology used in video games that are available at the MSU Libraries for the exhibit. With the design guidance from Shelby Kroske, me and Austin Deneau developed an online version of the <a href="https://lib.msu.edu/exhibits/universal-access-accessibility-in-library-world">Universal Access: Accessibility in Library World</a> exhibit. The crown jewels of this online version are the <a href="https://lib.msu.edu/exhibits/universal-access-accessibility-in-library-world/vision-deficiency-simulator">Color Vision Deficiency Simulator</a> which helps simulate various color vision deficiencies and the <a href="https://lib.msu.edu/exhibits/universal-access-accessibility-in-library-world/tactile-map">Interactive 3D Map</a> of the first floor of the MSU Library
+            </p>
+            <h4>Conferences Attended/Upcoming</h4>
+            <ul>
+                <li>Helping Serve the Neurodiverse in your Library Community: East Lansing, MI May 2nd, 2024.</li>
+                <li>MiALA 2024 Annual Conference: Kalamazoo, MI, May 15 – 17th, 2024.</li>
+                <li>BTAA REI Phase II Workshop: Mar  21 – 22nd, 2025.</li>
+                <li>Digital Library Federation: East Lansing, MI, July 29 – 31st, 2024.</li>
+                <li>MiALA 2025 Annual Conference: Dearborn, MI, May 18 – 20th, 2025.</li>
+            </ul>
+            <h4>Continuous Education</h4>
+            <h5 class="font-semibold">Leaders of Awesome:  Outcome-Driven UX Metrics</h5>
+            <p>
+                This 8-week course with Jared Spool (Nov 24 - Jan 25) included twice a week cohort meetings on data-driven decision-making and one-on-one sessions with Jared who discussed UX with his White House UX research experiences.
+            </p>
+            <h5 class="font-semibold">User Experience Research and Design Specialization</h5>
+            <p>
+                A 10 week UofM course through Coursera on using appropriate UX methods for UX Research.
+            </p>
+            <h5 class="font-semibold">Research Software Engineering with Python</h5>
+            <h5 class="font-semibold">Angular: The Complete Guide 2025 Edition Udemy Course</h5>
+            <h5 class="font-semibold">Flask Fridays by Codemy</h5>
+            <p>
+                All 3 of the above courses are used to learn and gain experience on Angular and Python which helped us build the Digital Signage system. 
+            </p>
+            <h3>Self Evaluation of Service and/or Professional Activities</h3>
+            <h4>MSU Library Committees</h4>
+            <h5 class="font-semibold">Library Environmental Committee</h5>
+            <p>
+                This year has been incredibly fulfilling as the chair of the Library Environmental Committee. I had the privilege of spearheading several impactful initiatives, including organizing events for Earth Day 2025. Our committee also had the opportunity to meet with the Sustainable Spartans group on campus. We forged strong relationships with them, supporting each other's initiatives and exploring opportunities for collaboration on future Earth Day events. One of my favorite roles was introducing speakers and being the boots-on-the-ground person for several Beal Garden tours.
+            </p>
+            <p>
+                Being the chair provided me with a unique opportunity to meet with the Dean of the Library every semester, where I could relay our committee's concerns and ideas. I'm particularly proud that our committee is supporting Eric Tans in pursuing the Sustainable Libraries Initiative Certification for our library, which could make us the first in the Big Ten Conference to achieve this milestone. Additionally, I took it upon myself to archive the old meeting minutes and newsletters produced by the committee, ensuring that our history and progress are well-documented for future members. 
+            </p>
+            <h5 class="font-semibold">Library Newsletter Committee</h5>
+            <p>
+                This year, I was the secretary of the Newsletter committee responsible for keeping track of our minutes and also helping with the editorial aspect of the newsletter for a few months. It is such a fulfilling role as I get to read the crowning achievements of our colleagues and being part of the committee that promotes them. Me and Austin Deanu are also responsible for making the newsletter emails accessible so it can be used by everyone in the Library.
+            </p>
+            <h5 class="font-semibold">Diversity Advisory Committee</h5>
+            <p>
+                The Diversity Advisory Committee had an eventful year as we had to contend with the leadership changes at the Federal level. Under the leadership of Janette Nunez and Holly Cullerton, with the support of Alex Rivera we decided to meet more frequently to support each other with the projects that have been sidelined due to the uncertainty. A notable achievement for the year was that me and Holly Cullerton organized a donation event to the food bank where we were able to donate 5 boxes of baking supplies to MSU food bank in November and December.
+            </p>
+            <h5 class="font-semibold">Faculty Affairs Committee</h5>
+            <p>
+                I was fortunate enough to be a part of the Faculty Affairs Committee and June of 2024 provided an incredible opportunity to understand the work and efforts of our amazing colleagues. Being on the committee expanded my knowledge of the incredible work that goes on in our library. As a committee we were responsible to read the evaluations of all our librarian colleagues and make recommendations to the dean based on their evaluations.
+            </p>
+            <h5 class="font-semibold">MSU Libraries Digital Accessibility Liaison</h5>
+            <p>
+                I’m one of 4 liaisons to the Digital Accessibility Liaisons who meet regularly with the campus wide group and discuss our findings, achievements and concerns with the wider MSU community. We recently worked closely with Dennis Bond and his team to evaluate the accessibility criteria for various content management systems used across campus and provided feedback on the identified criteria. This also prompted us to make improvements to our Drupal system (cms we use here in the library).
+            </p>
+            <h4>Professional Organizations and Groups</h4>
+            <h5 class="font-semibold">ALA Core Web Committee</h5>
+            <p>
+                Joining the ALA Core web committee was an incredibly welcoming experience. It was really nice to see friendly faces that I know from the MSU Library and from past ALA Core conferences. I felt a strong sense of camaraderie and support. The committee members were eager to learn about my background and how my Drupal technical expertise could benefit their website.
+            </p>
+            <p>
+                During our initial meetings, I was encouraged to share my ideas and suggestions and they were eager to listen to my experience migrating from Drupal 7 to Drupal 10. The ALA core team were open to exploring new approaches to enhance the website's functionality and user experience. This collaborative environment allowed me to quickly gain an understanding of their needs and jump right into action.
+            </p>
+            <p>
+                I worked closely with other committee members who trained me on using their Drupal setup and my technical skills in Drupal were leveraged to clean up the <a href="https://www.ala.org/core/awards-scholarships/margaret-mann-citation">Awards and Scholarships</a> page. I was also able to lend my experience to fix some of the accessibility issues on this page.
+            </p>
+            <p>
+                Overall, my experience with the ALA Core web committee was both rewarding and fulfilling, and I’m already on the list to serve as a co-chair next year.
+            </p>
+            <h5 class="font-semibold">Digital Library Federation Local Organizing Committee</h5>
+            <p>
+                The MSU Libraries in East Lansing hosted the DLF conference from July 29th to 31st. As a member of the local organizing committee, I played a role in ensuring the participants had an easier time navigating the large MSU campus. I assisted with signage for the conference to ensure attendees could easily navigate the venue. I was involved in developing a wayfinding guide to help participants find their way around the campus and conference areas. I helped with creating a list of local activities and eateries, providing attendees with options to explore East Lansing during their stay and walked them to various eateries on campus during the conference. It was a rewarding experience supporting various logistics, stepping in wherever needed. This allowed me to contribute significantly to the conference's organization and helped me network outside of the MSU Library.
+            </p>
+            <h5 class="font-semibold">Programming in Practice Book Club</h5>
+            <p>
+                Programming in Practice is collaboration between DSL and ICER; I was part of the core committee that organized a bi-weekly programming club in the DSL where students, faculty and community members assembled and read the book Research Software Engineering with Python. This is a year-long program that started in Fall of 2024 and ends in April 2025. It was a fulfilling experience to help our students and community members with their programming questions and challenges and I’m looking forward to doing this again next fall.
+            </p>
+            <h4>MSU Library Mentor/Mentee Program</h4>
+            <p>
+                This is my 2nd year with Emilia Marcyk-Taylor as my mentor. Emilia helped me navigate being a librarian and provided guidance on the fast approaching reappointment. Throughout the program, we held regular working meetings that provided invaluable mentorship and guidance. Our goals, which included networking with colleagues on campus and several major organizations such as ALA, MiALA, ALA Core Forum and working with students for UX research, were clear, focused and were shared between 2023 and 2024.
+            </p>
+        </div>
+    </div>
+</Layout>

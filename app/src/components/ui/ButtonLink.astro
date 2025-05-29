@@ -1,0 +1,12 @@
+---
+const {path, target} = Astro.props
+---
+
+<a 
+href={path}
+target={target}
+class="bg-teal-900 no-underline text-teal-50 p-3 text-blue-500 rounded-[5rem] hover:no-underline hover:bg-green-800 focus:outline-2 focus:outline-offset-2 focus:outline-green-500 active:bg-green-700 
+        dark:bg-gray-600 dark:text-teal-50 dark:hover:bg-green-800 dark:focus:outline-green-500 dark:active:bg-green-700">
+  <slot />
+</a>
+ 

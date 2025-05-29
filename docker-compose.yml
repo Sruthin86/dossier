@@ -1,0 +1,27 @@
+---
+services:
+  app:
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.app.rule=Host(`${APP_HOST?:error}`)"
+        - "traefik.http.routers.app.entrypoints=websecure"
+        - "traefik.http.routers.app.tls=true"
+        - "traefik.http.services.app.loadbalancer.server.port=4321"
+      mode: replicated
+      replicas: 1
+      update_config:
+        failure_action: rollback
+      restart_policy:
+        window: 15s
+    command: ["sh", "-c", "npx astro dev --host 0.0.0.0"]
+    networks:
+      - default
+      - proxy
+
+networks:
+  proxy:
+    external: true
+    driver: overlay
+  default:
+    driver: overlay

@@ -1,0 +1,53 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BetterIcon from "@/components/ui/BetterIcon.astro";
+import List from "@/components/ui/List.astro";
+import {RESEARCH_ICONS} from "@/data/researchIcons";
+import Figure from "@/components/ui/Figure.astro";
+import ProfilePictures from '@/assets/profile_pictures.png'
+---
+<Layout title="Sruthin Gaddam | Continuous Education">
+    <div class="prose max-w-none">
+        <h1 class="text-3xl font-bold mb-8">Continuous Education</h1>
+        <div class="mb-12">
+            <h2>2022</h2>
+            <List
+            listItems={[
+            "Book: Forcontu Expert in Drupal Back-end Development.",
+            "Book: Forcontu Expert in Drupal Front-end Development.",
+            "Book: UX Team of One - Authored by Leah Buley."
+            ]}
+            className="list-disc list-inside"
+            />
+            <h2>2023</h2>
+            <List
+            listItems={[
+            "Book:  A Handbook of UX Research & Design in Libraries - Authored by Andy Priestner.",
+            "CPACC Certification Course: A 10-week online course moderated by Kevin Henley from MSU IT.",
+            "IAAP CPACC Exam Preparation Course: A self-paced course through Deque University.",
+            "The Complete Traefik training Course: An online course through Udemy."
+            ]}
+            className="list-disc list-inside"
+            />
+            <h2>2024</h2>
+            <List
+            listItems={[
+            "Book: User Experience in Libraries - Authored by Andy Priestner.",
+            "Text Analysis Workshop: A Spring semester course taught by Devin Higgins and Kate Topham.",
+            "Book: Research Software Engineering with Python.",
+            "Leaders of Awesome Outcome-Driven UX Metrics: A 8-week online course by Jared Spool."
+            ]}
+            className="list-disc list-inside"
+            />
+            <h2>2025</h2>
+            <List
+            listItems={[
+            "Angular: The Complete Guide 2025 Edition Udemy Course.",
+            "Flask Fridays by Codemy.",
+            "User Experience Research and Design Specialization: A 10 week UofM course through Coursera."
+            ]}
+            className="list-disc list-inside"
+            />
+        </div>
+    </div>
+</Layout>
