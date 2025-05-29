@@ -94,4 +94,4 @@ export default defineConfig({
 ```
 
 [devUrl]: https://gaddamsrdossier.devel.lib.msu.edu
->>>>>>> development
+
